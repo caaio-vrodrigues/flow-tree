@@ -1,0 +1,68 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+:root {
+  /* Colors */
+  --bgWhite: rgb(242, 242, 242);
+  --bgBlack: rgb(28, 27, 27);
+  --colorPrimary: rgb(19, 111, 192);
+  --colorPrimaryHover: rgb(116, 185, 217);
+  --colorSecondary: rgb(116, 192, 252);
+
+  /* Border and Shadow*/
+  --borderBox: 0.1rem solid var(--colorPrimary);
+  --boxShadow: 0.05rem 0.05rem 0.05rem 0.05rem var(--colorPrimary);
+
+  /* Font size */
+  --fontSize-h1: 0.95rem;
+  --fontSize-h2: 0.9rem;
+  --fontSize-p: 0.85rem;
+
+  /* Header-Main-Footer */
+  --paddingLatPadraoHeaderMainFooter: 2rem;
+  --allContentWidth: 123.75rem;
+
+  /* header */
+  --headerHeight: 6.2rem;
+
+  /* Blocks */
+  --paddingBlocksComps: 1rem;
+  --borderRadiusBlocks: 0.8rem;
+
+  /* Tooltips */
+  --paddinTooltipe: 0.3rem;
+  --borderRadiusTooltipe: 0.3rem;
+  --marginTopBottomTooltipe: 0.3rem;
+  --fontSize-caixinhaTooltipe: 0.7rem;
+
+  /* list */
+  --spaceBetweenLines: 0.5rem 0;
+}
+
+html{
+  background-color: var(--bgWhite);
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 90.625rem) {
+  :root {
+    --fontSize-h1: 0.85rem;
+    --fontSize-h2: 0.8rem;
+    --fontSize-p: 0.75rem;
+  }
+}

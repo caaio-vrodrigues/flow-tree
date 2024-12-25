@@ -1,0 +1,17 @@
+.foot{
+  min-height: 120px;
+  border-top: var(--borderBox);
+  margin-top: auto;
+  padding: var(--paddingLatPadraoHeaderMainFooter);
+}
+
+.wrapFootBlocks{
+  display: flex;
+  text-align: center;
+  max-width: var(--allContentWidth);
+  margin: auto;
+}
+
+.footBlocks{
+  width: 33.33%;
+}

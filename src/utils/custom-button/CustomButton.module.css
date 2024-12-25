@@ -1,0 +1,36 @@
+.customButtom{
+  position: relative;
+}
+
+.customButtom svg{
+  color: var(--colorPrimary);
+  width: 1rem;
+  height: 1rem;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: var(--paddinTooltipe);
+  border-radius: var(--borderRadiusTooltipe);
+  z-index: 98;
+  transition: opacity 0.2s ease;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  font-size: var(--fontSize-caixinhaTooltipe);
+}
+
+/* Posicionamento do Tooltip */
+.tooltipTop {
+  bottom: 100%; /* Posiciona acima do botão */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta para garantir centralização */
+  margin-bottom: var(--marginTopBottomTooltipe); /* Espaço entre o botão e o tooltip */
+}
+
+.tooltipBottom {
+  top: 100%; /* Posiciona abaixo do botão */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta para garantir centralização */
+  margin-top: var(--marginTopBottomTooltipe); /* Espaço entre o botão e o tooltip */
+}

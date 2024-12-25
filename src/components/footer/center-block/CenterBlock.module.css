@@ -1,0 +1,17 @@
+.centerBlock{
+  color: var(--colorPrimary);
+}
+.centerBlock h1{
+  font-size: var(--fontSize-h1);
+}
+
+.wrapCopy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapCopy h1{
+  margin-right: 0.2rem;
+}

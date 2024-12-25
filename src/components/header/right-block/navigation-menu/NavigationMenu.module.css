@@ -1,0 +1,46 @@
+/* src/components/navigation/NavigationMenu.module.css */
+
+.menu {
+  position: absolute;
+  text-align: left;
+  top: 3.7rem;
+  right: 0.1rem;
+  background-color: white;
+  border: var(--borderBox);
+  box-shadow: var(--boxShadow);
+  z-index: 111;
+  padding: var(--paddingBlocksComps);
+  border-radius: var(--borderRadiusBlocks);
+}
+
+.menu li {
+  margin: var(--spaceBetweenLines);
+}
+
+.menu li button {
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+  color: var(--colorPrimary);
+}
+
+.menu li button:hover {
+  color: var(--colorPrimaryHover);
+}
+
+.closeButton {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: var(--fontSize-h1);
+  margin-left: auto !important;
+  color: var(--colorPrimary);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: var(--colorPrimaryHover);
+}
