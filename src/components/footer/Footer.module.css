@@ -3,6 +3,11 @@
   border-top: var(--borderBox);
   margin-top: auto;
   padding: var(--paddingLatPadraoHeaderMainFooter);
+  color: var(--colorPrimary);
+}
+
+.foot p{
+  color: var(--bgBlack);
 }
 
 .wrapFootBlocks{

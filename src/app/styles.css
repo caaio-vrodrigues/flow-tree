@@ -14,6 +14,7 @@
   --colorPrimary: rgb(19, 111, 192);
   --colorPrimaryHover: rgb(116, 185, 217);
   --colorSecondary: rgb(116, 192, 252);
+  --paragraphColor: ;
 
   /* Border and Shadow*/
   --borderBox: 0.1rem solid var(--colorPrimary);

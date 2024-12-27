@@ -11,7 +11,7 @@ export const LeftBlock = () => {
     <div className={`${styles.leftBlock}`}>
       <div className={styles.wrapLogo}>
         <FontAwesomeIcon icon={faTree}/>
-        <p>Flow Tree</p>
+        <span>SFlow Tree</span>
       </div>
     </div>
   );

@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 .centerBlock{
   color: var(--colorPrimary);
 }
+
 .centerBlock h1{
   font-size: var(--fontSize-h1);
+}
+
+.centerBlock h2{
+  font-size: var(--fontSize-h1);
+}
+
+.wrapLogo{
+  margin-bottom: 2rem;
 }
 
 .wrapCopy{
@@ -12,6 +23,21 @@
   width: 100%;
 }
 
-.wrapCopy h1{
+.logoH1{
+  font-family: "Poppins", serif;
+  font-weight: 700;
+}
+
+.iconCopy{
+  height: 1rem;
+  width: 1rem;
+  color: var(--colorPrimary);
+}
+
+.wrapCopy h2{
   margin-right: 0.2rem;
+}
+
+.copyH1{
+  font-weight: 500;
 }
