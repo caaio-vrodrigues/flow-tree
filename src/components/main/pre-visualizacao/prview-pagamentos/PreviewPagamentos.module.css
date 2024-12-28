@@ -1,0 +1,49 @@
+.secPreviewPag{
+  border-bottom: 0.01rem solid var(--colorPrimary);
+  padding-bottom: 2rem;
+}
+
+.secPreviewPag button{
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--colorPrimary);
+}
+
+.secPreviewPag h1{
+  font-size: var(--fontSize-h1);
+  margin-right: 0.2rem;
+}
+
+.secPreviewPag h2{
+  font-size: var(--fontSize-h2);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.secPreviewPag h3{
+  font-size: var(--fontSize-h3);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.secPreviewPag h1:hover{
+  cursor: pointer;
+  color: var(--colorPrimaryHover);
+}
+
+.wrapArticlesPagamentos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.wrapArticlesPagamentos article{
+  width: 12rem;
+  background-color: var(--colorSecondary);
+  padding: var(--paddingBlocksComps);
+  border-radius: var(--borderRadiusBlocks);
+  border: 0.07rem solid rgb(84, 82, 82);
+}
