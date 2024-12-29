@@ -83,7 +83,7 @@ export const GraficoTempo: React.FC<{ tempo: TempoProps }> = ({ tempo }) => {
   };
 
   // Cores para os segmentos
-  const colors = ['#e8e6a0', '#1E90FF']; // Tempo Total e Tempo Gasto
+  const colors = ['#f6f5f0', '#4388ce']; // Tempo Total e Tempo Gasto
 
   const diasRestantes = tempoDisponivel / (1000 * 60 * 60 * 24); // Converte de milissegundos para dias
 

@@ -1,3 +1,4 @@
+// components/footer/center-block/CenterBlock.tsx
 
 //icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

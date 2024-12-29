@@ -1,3 +1,5 @@
+/* src/components/main/orcamentos/orcamento/graficos/grafico-gastos/GraficoGastos.module.css */
+
 .pieSegment {
   transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Sombra */
@@ -26,15 +28,16 @@
 }
 
 .listaLegenda li{
-  margin-bottom: 1rem;
-  margin-right: 0.8rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
   font-size: 0.9rem;
   width: 28%;
   padding-right: 0.3rem;
   min-width: 10rem;
-  border: 1px solid black;
-  padding: 0.3rem;
+  padding: 1rem;
   border-radius: 0.3rem;
+  box-shadow: var(--boxShadow);
+  border: 0.05rem solid rgb(153, 154, 155);
 }
 
 .wrapLiInside{
@@ -60,5 +63,5 @@
 }
 
 .pPercent{
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }

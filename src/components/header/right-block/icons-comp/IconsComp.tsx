@@ -1,3 +1,5 @@
+// src/components/header/right-block/navigation-menu/NavigationMenu.tsx
+
 //components
 import { CustomButton } from '@/utils/custom-button/CustomButton';
 

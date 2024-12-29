@@ -1,3 +1,5 @@
+// src/components/main/pre-visualizacao/preview-pagamentos/PreviewPagamentos.tsx
+
 //styles
 import styles from './PreviewPagamentos.module.css';
 

@@ -1,4 +1,4 @@
-// src/components/navigation/NavigationMenu.tsx
+// src/components/header/right-block/navigation-menu/NavigationMenu.tsx
 
 //React
 import React, { useContext } from 'react';

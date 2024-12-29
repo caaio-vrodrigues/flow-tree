@@ -1,3 +1,5 @@
+/* src/components/header/right-block/RightBlock.module.css */
+
 .rightBlock{
   display: flex;
   flex-direction: row-reverse;

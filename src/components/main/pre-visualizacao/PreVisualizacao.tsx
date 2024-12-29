@@ -1,3 +1,5 @@
+// src/components/main/pre-visualizacao/PreVisualizacao.tsx
+
 //styles
 import styles from './PreVisualizacao.module.css';
 

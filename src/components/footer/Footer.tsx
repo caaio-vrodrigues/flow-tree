@@ -1,4 +1,5 @@
-// components
+// components/footer/Footer.tsx
+
 import { LeftBlock } from './left-block/LeftBlock';
 import { CenterBlock } from './center-block/CenterBlock';
 import { RightBlock } from './right-block/RightBlock';

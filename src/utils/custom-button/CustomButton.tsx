@@ -1,3 +1,5 @@
+// src/utils/custom-button/CustomButton.tsx
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core'; // Importar o tipo para ícone
 import { Dispatch, SetStateAction } from "react";

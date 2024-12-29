@@ -1,4 +1,4 @@
-// src/components/main/orcamentos/orcamento/buttons-estoq-edit/ButtonsEstoqAndEdit.tsx
+// src/components/main/orcamentos/orcamento/orcamento-cabecalho/OrcamentoCabecalho.tsx
 
 //styles
 import styles from './OrcamentoCabecalho.module.css';

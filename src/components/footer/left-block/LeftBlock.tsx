@@ -1,3 +1,5 @@
+// components/footer/left-block/LeftBlock.tsx
+
 //styles
 import footStyles from '@/components/footer/Footer.module.css';
 import styles from './LeftBlock.module.css';

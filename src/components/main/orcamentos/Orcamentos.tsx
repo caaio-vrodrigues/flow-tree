@@ -34,12 +34,11 @@ export const Orcamentos = () => {
   };
 
   return (
-    <section className={`${styles.orcamentosContainer}`}>
+    <section>
       <ControlsElements 
         funcBack={funcBack} 
         funcAdd={funcAdd} 
-        funcSearch={funcSearch} 
-      /> 
+        funcSearch={funcSearch}/> 
       <div className={`${styles.wrapOrcamentos}`}>
         {orcamentosData
           .filter(data => data.cliente.includes(searchTerm))

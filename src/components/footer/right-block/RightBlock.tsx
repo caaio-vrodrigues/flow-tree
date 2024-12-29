@@ -1,3 +1,4 @@
+// components/footer/right-block/RightBlock.tsx
 
 //icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,3 +1,5 @@
+// src/components/header/right-block/RightBlock.tsx
+
 //styles
 import styles from './RightBlock.module.css';
 

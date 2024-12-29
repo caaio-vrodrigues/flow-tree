@@ -1,4 +1,4 @@
-// src/components/Orcamento.tsx
+// src/components/main/orcamentos/orcamento/Orcamento.tsx
 
 import { OrcamentoCabecalho } from './orcamento-cabecalho/OrcamentoCabecalho';
 import { OrcamentosInfosBasic } from './orcamentos-infos-basic/OrcamentosInfosBasic';

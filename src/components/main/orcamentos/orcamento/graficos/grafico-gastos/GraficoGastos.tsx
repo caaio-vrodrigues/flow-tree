@@ -1,4 +1,4 @@
-// src/components/GraficoGastos.tsx
+// src/components/main/orcamentos/orcamento/graficos/grafico-gastos/GraficoGastos.tsx
 
 import React from 'react';
 import styles from './GraficoGastos.module.css';
@@ -83,11 +83,11 @@ export const GraficoGastos: React.FC<{ gastos: GastoProps }> = ({ gastos }) => {
 
   // Cores para os segmentos
   const colors = [
-    '#1E90FF', // Gasto Material
-    '#187741', // Gasto Serviço
-    '#8b3535', // Gasto Combustível
-    '#8d7408', // Gasto Alimentação
-    '#e8e6a0', // Disponível
+    '#4388ce', // Gasto Material
+    '#77a2b0', // Gasto Serviço
+    '#acdbe1', // Gasto Combustível
+    '#495f81', // Gasto Alimentação
+    '#f6f5f0', // Disponível
   ];
 
   // Legenda do gráfico de gastos
@@ -157,7 +157,7 @@ export const GraficoGastos: React.FC<{ gastos: GastoProps }> = ({ gastos }) => {
                 </span>
                 <h4>{`${item.label}: `}</h4>
               </div>
-              <p>R$ {formatMoeda(item.realValue)}</p>
+              <p>{formatMoeda(item.realValue)}</p>
               <p className={styles.pPercent}>Percentual equivalente: {item.value.toFixed(2)}%</p>
             </li>
           ))}

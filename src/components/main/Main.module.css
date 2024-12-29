@@ -1,3 +1,5 @@
+/* src/components/main/Main.module.css */
+
 .main{
   margin-top: var(--headerHeight) !important;
   padding: var(--paddingLatPadraoHeaderMainFooter);

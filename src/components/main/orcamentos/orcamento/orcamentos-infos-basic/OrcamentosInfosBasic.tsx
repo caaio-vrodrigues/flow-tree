@@ -1,4 +1,4 @@
-// src/components/main/orcamentos/orcamento/buttons-estoq-edit/OrcamentosInfosBasic.tsx
+// src/components/main/orcamentos/orcamento/orcamento-infos-basic/OrcamentosInfosBasic.tsx
 
 // utils
 import { formatDate } from '@/utils/formatDate';

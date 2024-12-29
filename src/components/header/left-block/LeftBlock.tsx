@@ -1,3 +1,5 @@
+// src/components/header/left-block/LeftBlock.tsx
+
 //styles
 import styles from './LeftBlock.module.css';
 

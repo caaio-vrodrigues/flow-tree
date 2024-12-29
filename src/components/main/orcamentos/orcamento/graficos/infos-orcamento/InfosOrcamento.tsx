@@ -1,4 +1,4 @@
-// src/components/main/orcamentos/orcamento/graficos/grafico-infos/InfosOrcamento.tsx
+// src/components/main/orcamentos/orcamento/graficos/infos-orcamento/InfosOrcamento.tsx
 
 import React from 'react';
 import styles from './InfosOrcamento.module.css';

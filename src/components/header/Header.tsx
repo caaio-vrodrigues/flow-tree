@@ -1,3 +1,5 @@
+// src/components/header/Header.tsx
+
 //components
 import { LeftBlock } from './left-block/LeftBlock';
 import { RightBlock } from './right-block/RightBlock';

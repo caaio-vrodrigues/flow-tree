@@ -1,9 +1,13 @@
+/* src/components/main/orcamentos/orcamento/graficos/infos-orcamento/InfosOrcamento.module.css */
+
 .wrapH2{
-  width: 48%;
-  margin-top: 1.2rem;
-  background-color: var(--bgWrapCards);
+  width: 49.7%;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgb(182, 198, 207);
   box-shadow: var(--boxShadow);
-  padding: 0.5%;
+  border: 0.1rem solid rgb(185, 186, 188);
 }
 
 .wrapH2 h2{
