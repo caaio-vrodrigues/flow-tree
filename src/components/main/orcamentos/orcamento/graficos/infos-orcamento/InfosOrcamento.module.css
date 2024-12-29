@@ -1,0 +1,26 @@
+.wrapH2{
+  width: 48%;
+  margin-top: 1.2rem;
+  background-color: var(--bgWrapCards);
+  box-shadow: var(--boxShadow);
+  padding: 0.5%;
+}
+
+.wrapH2 h2{
+  font-size: var(--fontSize-h2);
+}
+
+.spanH2{
+  font-size: var(--fontSize-p);
+  font-weight: 400;
+  margin-left: 0.3rem;
+}
+
+.wrapGrafico{
+  margin-top: 1rem;
+}
+
+.wrapGrafico svg{
+  display: flex;
+  margin-inline: auto;
+}

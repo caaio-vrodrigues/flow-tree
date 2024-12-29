@@ -1,0 +1,52 @@
+.wrapButtons{
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+
+.buttonsArrowAndAdd{
+  margin-inline-end: 0.7rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  height: fit-content;
+}
+
+.buttonsArrowAndAdd svg{
+  width: 1rem;
+  height: 1rem;
+  color: var(--colorPrimary);
+}
+
+.buttonsArrowAndAdd svg:hover{
+  color: var(--colorPrimaryHover);
+  cursor: pointer;
+}
+
+.wrapSearch{
+  border: 0.15rem solid var(--colorPrimary);
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+.wrapSearch input{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.wrapSearch input::placeholder{
+  color: var(--colorPrimary);
+}
+
+.wrapSearch button{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.wrapSearch svg{
+  color: var(--colorPrimary);
+}
+
+.wrapSearch svg:hover{
+  color: var(--colorPrimaryHover);
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.butShowMore {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding-top: 1rem;
+  cursor: pointer;
+  font-size: var(--fontSize-h1);
+}

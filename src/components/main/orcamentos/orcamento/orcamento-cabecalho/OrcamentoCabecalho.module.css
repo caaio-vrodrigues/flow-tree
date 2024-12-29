@@ -1,0 +1,21 @@
+.wrapH1AndButtons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapH1AndButtons button{
+  background-color: var(--bgButton);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: none;
+  margin-left: 0.7rem;
+}
+
+.wrapH1AndButtons button:hover{
+  background-color: var(--bgButtonHover);
+}
+
+.wrapButtons{
+  text-align: end;
+  width: 50%;
+}

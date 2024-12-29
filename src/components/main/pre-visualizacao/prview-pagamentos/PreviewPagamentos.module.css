@@ -37,13 +37,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .wrapArticlesPagamentos article{
-  width: 12rem;
-  background-color: var(--colorSecondary);
+  margin-top: 0.5rem;
+  width: 15%;
+  min-width: 12rem;
+  background-color: var(--colorPrimary);
+  color: var(--bgWhite);
   padding: var(--paddingBlocksComps);
   border-radius: var(--borderRadiusBlocks);
-  border: 0.07rem solid rgb(84, 82, 82);
+  border: 0.07rem solid rgb(161, 164, 167);
 }

@@ -1,0 +1,9 @@
+.orcamentosContainer {
+  width: 100%;
+}
+
+.wrapOrcamentos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

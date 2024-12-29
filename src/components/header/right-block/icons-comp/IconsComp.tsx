@@ -24,18 +24,15 @@ export const IconsComp = () => {
         msgToolTipe='Menu'
         icon={faBars}
         onClick={setIsMenuOpen}
-        tooltipPosisition='bottom'
       />
       {isMenuOpen && <NavigationMenu onClose={setIsMenuOpen}/>}
       <CustomButton 
         msgToolTipe='Config. Conta'
         icon={faUser}
-        tooltipPosisition='bottom'
       />
       <CustomButton 
         msgToolTipe='Sair'
         icon={faSignOutAlt}
-        tooltipPosisition='bottom'
       />
     </div>
   );

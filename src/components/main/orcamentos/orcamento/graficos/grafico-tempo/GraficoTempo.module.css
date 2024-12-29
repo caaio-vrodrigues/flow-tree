@@ -1,0 +1,58 @@
+.pieSegment {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Sombra */
+}
+
+.pieSegment:hover {
+  transform: scale(1.02); /* Efeito de aumento ao passar o mouse */
+  opacity: 0.8; /* Efeito de opacidade ao passar o mouse */
+}
+
+.listaLegenda {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.circulo {
+  display: inline-block;
+  width: 12px; /* ou qualquer largura desejada */
+  height: 12px; /* ou qualquer altura desejada */
+  border-radius: 50%;
+  margin-right: 8px; /* espaço entre o círculo e o texto */
+}
+
+.listaLegenda li {
+  margin-bottom: 1rem;
+  margin-right: 0.8rem;
+  font-size: var(--fontSize-h2);
+  width: 28%;
+  padding-right: 0.3rem;
+  min-width: 10rem;
+  border: 1px solid black;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.wrapLiInside {
+  display: flex;
+  min-width: 12rem;
+}
+
+.svgGraphic {
+  width: 11rem;
+  height: 11rem;
+}
+
+.legenda h2{
+  font-size: var(--fontSize-h2);
+}
+
+.legenda p{
+  font-size: var(--fontSize-p);
+}
+
+.pPercent{
+  margin-top: 0.5rem;
+}

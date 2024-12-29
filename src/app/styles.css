@@ -9,11 +9,11 @@
 
 :root {
   /* Colors */
-  --bgWhite: rgb(242, 242, 242);
+  --bgWhite: rgb(249, 248, 248);
   --bgBlack: rgb(28, 27, 27);
   --colorPrimary: rgb(19, 111, 192);
   --colorPrimaryHover: rgb(116, 185, 217);
-  --colorSecondary: rgb(176, 211, 238);
+  --colorSecondary: rgb(4, 103, 174);
   --paragraphColor: ;
 
   /* Border and Shadow*/

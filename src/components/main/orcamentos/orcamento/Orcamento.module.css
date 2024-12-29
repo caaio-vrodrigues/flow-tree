@@ -1,0 +1,40 @@
+.artic{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--boxShadow);
+  margin-top: 2rem;
+  padding: 1%;
+  border-radius: 0.5rem;
+  height: fit-content;
+}
+
+.IconsOrcamento{
+  width: 1rem;
+  height: 1rem;
+}
+
+.artic h1{
+  font-size: var(--fontSize-h1);
+  width: 50%;
+}
+
+.artic h2{
+  font-size: var(--fontSize-h2);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+.artic p{
+  font-size: var(--fontSize-p);
+}
+
+
+
+
+
+
+
+
+
+
+

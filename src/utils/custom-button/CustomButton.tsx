@@ -5,7 +5,6 @@ import { useState } from "react";
 import styles from './CustomButton.module.css'; 
 
 type TTooltipe = {
-  styleButton?: string;
   msgToolTipe: string;
   icon: IconProp;
   onClick?: Dispatch<SetStateAction<boolean>>,
@@ -25,15 +24,13 @@ export const CustomButton = ({
       className={styles.customButtom}
       onClick={() => onClick(value => !value)}
       onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
-      >
+      onMouseLeave={() => setIsVisible(false)}>
         <FontAwesomeIcon icon={icon} />
         {isVisible && (
           <span 
             className={`${styles.tooltip} ${tooltipPosisition === 'bottom' ? 
-              styles.tooltipBottom : styles.tooltipTop}`}
-              >
-                {msgToolTipe}
+            styles.tooltipBottom : styles.tooltipTop}`}>
+              {msgToolTipe}
           </span>
         )}
     </button>
