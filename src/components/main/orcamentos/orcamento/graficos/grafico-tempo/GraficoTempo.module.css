@@ -52,6 +52,10 @@
   font-size: var(--fontSize-h2);
 }
 
+.legenda h3{
+  font-size: var(--fontSize-h2);
+}
+
 .legenda p{
   font-size: var(--fontSize-p);
 }

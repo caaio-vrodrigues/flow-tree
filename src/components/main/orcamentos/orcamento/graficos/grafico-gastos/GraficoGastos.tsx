@@ -146,7 +146,6 @@ export const GraficoGastos: React.FC<{ gastos: GastoProps }> = ({ gastos }) => {
         ))}
       </svg>
       <div className={styles.legenda}>
-        <h2>Lucro Atual: {formatMoeda(lucroAtual)} ({percentualLucro.toFixed(2)}%)</h2>
         <ul className={styles.listaLegenda}>
           {legendData.map((item, index) => (
             <li key={index}>
@@ -155,14 +154,17 @@ export const GraficoGastos: React.FC<{ gastos: GastoProps }> = ({ gastos }) => {
                   className={styles.circulo}
                   style={{ backgroundColor: item.color }}>
                 </span>
-                <h4>{`${item.label}: `}</h4>
+                <h3>{`${item.label}: `}</h3>
               </div>
               <p>{formatMoeda(item.realValue)}</p>
               <p className={styles.pPercent}>Percentual equivalente: {item.value.toFixed(2)}%</p>
             </li>
           ))}
         </ul>
-        <h2>Gastos totais: {formatMoeda(gastoTotal)}</h2>
+        <div className={styles.wrapLucroEGastosH2}>
+          <h4>Lucro Atual: {formatMoeda(lucroAtual)} ({percentualLucro.toFixed(2)}%)</h4>
+          <h4>Gastos totais: {formatMoeda(gastoTotal)}</h4>
+        </div>
       </div>
     </>
   );

@@ -54,12 +54,23 @@
   font-size: var(--fontSize-h2);
 }
 
-.legenda h4{
+.legenda h3{
   font-size: var(--fontSize-h2);
 }
 
 .legenda p{
   font-size: var(--fontSize-p);
+}
+
+.wrapLucroEGastosH2{
+  display: flex;
+  width: 100%;
+}
+
+.wrapLucroEGastosH2 h4{
+  margin-top: 0.5rem;
+  font-size: var(--fontSize-h2);
+  margin-right: 2rem;
 }
 
 .pPercent{

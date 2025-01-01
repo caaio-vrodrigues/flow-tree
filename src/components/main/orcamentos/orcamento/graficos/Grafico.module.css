@@ -1,9 +1,41 @@
 /* src/components/main/orcamentos/orcamento/graficos/Graficos.module.css */
 
-.contWrapH2{
+.wrapGraficos{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
+}
+
+.wrapH2 h2{
+  font-size: var(--fontSize-h2);
+}
+
+.wrapGrafico{
+  width: 49.7%;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgb(182, 198, 207);
+  box-shadow: var(--boxShadow);
+  border: 0.1rem solid rgb(185, 186, 188);
+}
+
+.wrapGrafico svg{
+  display: flex;
+  margin-inline: auto;
+}
+
+.spanH2{
+  font-size: var(--fontSize-p);
+  font-weight: 400;
+  margin-left: 0.3rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 

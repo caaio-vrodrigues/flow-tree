@@ -9,38 +9,59 @@ import styles from './Orcamento.module.css';
 
 type TOrcamento = {
   data: {
-    id: number,
-    num_orcam: string | number,
-    cliente: string,
-    cnpj_cliente: string,
-    situacao_orcamento: string,
-    obra: string,
-    valor_fechado: number,
-    valor_estip_gasto: number,
-    gasto_material_obra: number,
-    gasto_servico_obra: number,
-    gasto_combustivel: number,
-    gasto_alimentacao: number,
-    data_emissao: Date,
-    inicio_execucao: Date | null,
-    previsao_termino: Date | null,
-    situacaoObra: string,
-    pdf_orcamento: string,
-    pdf_contrato: string,
-  },
+    id: number;
+    num_orcam: string | number;
+    cliente: string;
+    cnpj_cliente: string;
+    situacao_orcamento: string;
+    obra: string;
+    valor_fechado: number;
+    valor_estip_gasto: number;
+    gasto_material_obra: number;
+    gasto_servico_obra: number;
+    gasto_combustivel: number;
+    gasto_alimentacao: number;
+    data_emissao: Date;
+    inicio_execucao: Date | null;
+    previsao_termino: Date | null;
+    situacaoObra: string;
+    pdf_orcamento: string;
+    pdf_contrato: string;
+  };
 };
 
 export const Orcamento = ({ data }: TOrcamento) => {
+  // Verificações de dados
+  const isValidOrcamento = () => {
+    return (
+      data &&
+      data.id &&
+      data.num_orcam &&
+      data.situacao_orcamento &&
+      data.valor_fechado !== undefined &&
+      data.valor_estip_gasto !== undefined
+    );
+  };
+
+  if (!isValidOrcamento()) {
+    return <div className={styles.error}>Dados do orçamento inválidos.</div>;
+  }
+
   return (
-    <article className={`${styles.artic}`}>
+    <article className={`${styles.artic} ${styles.responsive}`}>
       <OrcamentoCabecalho 
         num_orcam={data.num_orcam} 
-        obra={data.obra}/>
+        obra={data.obra} />
       <OrcamentosInfosBasic 
         cliente={data.cliente} 
         cnpj_cliente={data.cnpj_cliente} 
         data_emissao={data.data_emissao} 
-        situacao_orcamento={data.situacao_orcamento}/>
+        situacao_orcamento={data.situacao_orcamento}
+        inicio_execucao={data.inicio_execucao} 
+        previsao_termino={data.previsao_termino}
+        valor_fechado={data.valor_fechado}
+        valor_estip_gasto={data.valor_estip_gasto}
+        />
       <Graficos 
         gasto_alimentacao={data.gasto_alimentacao} 
         gasto_combustivel={data.gasto_combustivel} 
@@ -50,7 +71,7 @@ export const Orcamento = ({ data }: TOrcamento) => {
         previsao_termino={data.previsao_termino} 
         situacao_orcamento={data.situacao_orcamento} 
         valor_estip_gasto={data.valor_estip_gasto} 
-        valor_fechado={data.valor_fechado}/>
+        valor_fechado={data.valor_fechado} />
     </article>
   );
 };

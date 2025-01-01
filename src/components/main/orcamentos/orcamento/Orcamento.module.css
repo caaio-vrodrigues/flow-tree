@@ -1,6 +1,9 @@
 /* src/components/main/orcamentos/orcamento/Orcamento.module.css */
 
 .artic{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   background-color: white;
   border-radius: 10px;
   box-shadow: var(--boxShadow);
@@ -30,6 +33,17 @@
 
 .artic p{
   font-size: var(--fontSize-p);
+}
+
+.responsive {
+  max-width: 100%;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 

@@ -1,8 +1,9 @@
-/* // src/components/main/pre-visualizacao/preview-pagamentos/PreviewPagamentos.module.css */
+/* src/components/main/pre-visualizacao/preview-pagamentos/PreviewPagamentos.module.css */
 
 .secPreviewPag{
   border-bottom: 0.01rem solid var(--colorPrimary);
   padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .secPreviewPag button{

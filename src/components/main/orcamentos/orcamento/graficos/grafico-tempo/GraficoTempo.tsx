@@ -22,6 +22,10 @@ export const GraficoTempo: React.FC<{ tempo: TempoProps }> = ({ tempo }) => {
       const now = new Date();
 
       // Validação das datas de início e término
+      if (dataInicio == null && prazoTermino == null){
+        return { tempoGasto: 0, tempoDisponivel: 0, tempoTotal: 0 };
+      }
+
       if (!dataInicio || !prazoTermino) {
         console.error("Data de início ou de término inválida");
         return { tempoGasto: 0, tempoDisponivel: 0, tempoTotal: 0 };
@@ -92,30 +96,27 @@ export const GraficoTempo: React.FC<{ tempo: TempoProps }> = ({ tempo }) => {
       <svg
         className={styles.svgGraphic}
         viewBox="0 0 220 220"
-        aria-labelledby="graficoTempoTitle graficoTempoDesc"
-      >
-        <title id="graficoTempoTitle">Gráfico de Tempo</title>
-        <desc id="graficoTempoDesc">
-          Um gráfico de pizza mostrando a distribuição do tempo total para a obra e o tempo gasto.
-        </desc>
-        {angles.map((angle, index) => (
-          <path
-            key={index}
-            d={createPath(angle[0], angle[1])}
-            fill={colors[index % colors.length]} // Garantindo que o índice não exceda as cores disponíveis
-            className={styles.pieSegment}
-          />
-        ))}
+        aria-labelledby="graficoTempoTitle graficoTempoDesc">
+          <title id="graficoTempoTitle">Gráfico de Tempo</title>
+          <desc id="graficoTempoDesc">
+            Um gráfico de pizza mostrando a distribuição do tempo total para a obra e o tempo gasto.
+          </desc>
+          {angles.map((angle, index) => (
+            <path
+              key={index}
+              d={createPath(angle[0], angle[1])}
+              fill={colors[index % colors.length]} // Garantindo que o índice não exceda as cores disponíveis
+              className={styles.pieSegment}/>
+          ))}
       </svg>
       <div className={styles.legenda}>
-        <h2>Dias restantes para execução da obra: {diasRestantes.toFixed(0)} dias</h2>
         <ul className={styles.listaLegenda}>
           <li>
             <div className={styles.wrapLiInside}>
               <span
                 className={styles.circulo}
                 style={{ backgroundColor: colors[0] }} />
-              <h4>Tempo Total: </h4>
+              <h3>Tempo Total: </h3>
             </div>
             <p>{(tempoTotal / (1000 * 60 * 60 * 24)).toFixed(0)} dias</p>
             <p className={styles.pPercent}>Percentual equivalente: {porcentagens.tempoTotal.toFixed(2)}%</p>
@@ -125,12 +126,13 @@ export const GraficoTempo: React.FC<{ tempo: TempoProps }> = ({ tempo }) => {
               <span
                 className={styles.circulo}
                 style={{ backgroundColor: colors[1] }} />
-              <h4>Tempo Gasto: </h4>
+              <h3>Tempo Gasto: </h3>
             </div>
             <p>{(tempoGasto / (1000 * 60 * 60 * 24)).toFixed(0)} dias</p>
             <p className={styles.pPercent}>Percentual equivalente: {porcentagens.tempoGasto.toFixed(2)}%</p>
           </li>
         </ul>
+        <h2>Dias restantes para execução da obra: {diasRestantes.toFixed(0)} dias</h2>
       </div>
     </>
   );

@@ -4,14 +4,15 @@
 import styles from './Main.module.css';
 
 //components
-import { PreVisualizacao } from './pre-visualizacao/PreVisualizacao';
+import { PreviewPagamentos } from './prview-pagamentos/PreviewPagamentos';
 import { Orcamentos } from './orcamentos/Orcamentos';
 
 export const Main = () => {
   return(
     <main className={styles.main}>
+      <h1 className={styles.h1MainSEO}>Análises e Recursos</h1>
       <div className={styles.wrapMainContent}>
-        <PreVisualizacao/>
+        <PreviewPagamentos/>
         <Orcamentos/>
       </div>
     </main>

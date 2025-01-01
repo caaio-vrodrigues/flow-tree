@@ -1,7 +1,13 @@
 // src/app/layout.tsx
 
+// next
 import type { Metadata } from 'next';
+
+// styles
 import './styles.css';
+
+// context
+import { ContextMasterProvider } from '@/context/ContextProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body suppressHydrationWarning={true}>
-        {children}
+        <ContextMasterProvider>
+          {children}
+        </ContextMasterProvider>
       </body>
     </html>
   );

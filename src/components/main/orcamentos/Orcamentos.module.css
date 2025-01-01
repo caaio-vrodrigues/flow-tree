@@ -5,3 +5,10 @@
   flex-direction: column;
   width: 100%;
 }
+
+.loader {
+  text-align: center; 
+  font-size: 1.2rem; 
+  margin: 1rem 0;
+  color: var(--colorPrimary);
+}
