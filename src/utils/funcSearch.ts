@@ -2,18 +2,16 @@
 
 type TfuncSearch = {
   value: string,
-  setSearchTerm: React.Dispatch<React.SetStateAction<string>>,
+  setSearchValue: React.Dispatch<React.SetStateAction<string>>,
   setLoading: React.Dispatch<React.SetStateAction<boolean>>
-}
+};
 
-export const funcSearch = ({ value, setSearchTerm, setLoading }: TfuncSearch) => {
+export const funcSearch = ({ value, setSearchValue, setLoading }: TfuncSearch) => {
+  
   setLoading(true);
-  setSearchTerm(value); // Atualiza o termo de busca
+  setSearchValue(value);
 
-  console.log("Buscando por:", value);
-
-  // Simulando uma operação de busca com um timeout
   setTimeout(() => {
     setLoading(false);
-  }, 500); // Simula 0.5s de carregamento
+  }, 500);
 };

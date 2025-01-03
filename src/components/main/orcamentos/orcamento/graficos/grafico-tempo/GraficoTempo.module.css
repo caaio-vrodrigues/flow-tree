@@ -1,63 +1,18 @@
 /* src/components/main/orcamentos/orcamento/graficos/grafico-tempo/GraficoTempo.module.css */
 
 .pieSegment {
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
-  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Sombra */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
 }
 
 .pieSegment:hover {
   transform: scale(1.02); /* Efeito de aumento ao passar o mouse */
-  opacity: 0.8; /* Efeito de opacidade ao passar o mouse */
-}
-
-.listaLegenda {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.circulo {
-  display: inline-block;
-  width: 12px; /* ou qualquer largura desejada */
-  height: 12px; /* ou qualquer altura desejada */
-  border-radius: 50%;
-  margin-right: 8px; /* espaço entre o círculo e o texto */
-}
-
-.listaLegenda li {
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-  font-size: 0.9rem;
-  width: 28%;
-  padding-right: 0.3rem;
-  min-width: 10rem;
-  padding: 1rem;
-  border-radius: 0.3rem;
-  box-shadow: var(--boxShadow);
-  border: 0.05rem solid rgb(153, 154, 155);
-}
-
-.wrapLiInside {
-  display: flex;
-  min-width: 12rem;
+  opacity: 0.8
 }
 
 .svgGraphic {
   width: 11rem;
   height: 11rem;
-}
-
-.legenda h2{
-  font-size: var(--fontSize-h2);
-}
-
-.legenda h3{
-  font-size: var(--fontSize-h2);
-}
-
-.legenda p{
-  font-size: var(--fontSize-p);
 }
 
 .pPercent{

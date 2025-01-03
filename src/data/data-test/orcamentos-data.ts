@@ -1,6 +1,6 @@
 // src/data/data-test/orcamentos-data.ts
 
-type TOrcamentosData = {
+export type TOrcamentosData = {
   id: number,
   num_orcam: string | number,
   cliente: string,

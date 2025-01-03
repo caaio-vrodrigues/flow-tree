@@ -1,3 +1,4 @@
+// src/components/main/orcamentos/utils/isValidOrcamento.ts
 
 type TisValidOrcamento = {
   id: number,
@@ -18,7 +19,7 @@ type TisValidOrcamento = {
   gasto_servico_obra: number,
   gasto_combustivel: number,
   gasto_alimentacao: number,
-}
+};
 
 export const isValidOrcamento = (data: TisValidOrcamento) => {
   return data && 

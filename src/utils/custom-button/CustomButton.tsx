@@ -1,9 +1,15 @@
 // src/utils/custom-button/CustomButton.tsx
 
+// react
+import { Dispatch, SetStateAction, useState } from 'react';
+
+// icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core'; // Importar o tipo para ícone
-import { Dispatch, SetStateAction } from "react";
-import { useState } from "react";
+
+// tipagem
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
+// styles
 import styles from './CustomButton.module.css'; 
 
 type TTooltipe = {
@@ -14,27 +20,26 @@ type TTooltipe = {
 };
 
 export const CustomButton = ({
-  msgToolTipe,
-  icon,
+  msgToolTipe, icon,
   onClick = () => {},
-  tooltipPosisition = 'top', // Define 'top' como padrão se não for especificado
+  tooltipPosisition = 'top',
 }: TTooltipe) => {
-  const [isVisible, setIsVisible] = useState(false);
+
+  const [tooltipeVisible, setTooltipeVisible] = useState(false);
 
   return (
     <button
       className={styles.customButtom}
       onClick={() => onClick(value => !value)}
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}>
+      onMouseEnter={() => setTooltipeVisible(true)}
+      onMouseLeave={() => setTooltipeVisible(false)}>
         <FontAwesomeIcon icon={icon} />
-        {isVisible && (
+        {tooltipeVisible && 
           <span 
             className={`${styles.tooltip} ${tooltipPosisition === 'bottom' ? 
             styles.tooltipBottom : styles.tooltipTop}`}>
               {msgToolTipe}
-          </span>
-        )}
+          </span>}
     </button>
   );
 };

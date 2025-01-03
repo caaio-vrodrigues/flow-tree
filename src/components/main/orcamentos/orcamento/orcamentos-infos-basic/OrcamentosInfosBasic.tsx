@@ -1,8 +1,10 @@
 // src/components/main/orcamentos/orcamento/orcamento-infos-basic/OrcamentosInfosBasic.tsx
 
+// components
+import { ValoresPrazos } from './valores-prazos/ValoresPrazos';
+
 // utils
 import { formatDate } from '@/utils/formatDate';
-import { formatMoeda } from '@/utils/formatMoeda';
 
 // styles
 import styles from './OrcamentosInfosBasic.module.css';
@@ -22,45 +24,38 @@ export const OrcamentosInfosBasic = ({
   data_emissao, cliente, cnpj_cliente, situacao_orcamento,
   inicio_execucao, previsao_termino, valor_estip_gasto, valor_fechado,
 }: TOrcamentosInfosBasic) => {
-  return(<>
+  
+  const InfosBasic = (
     <div className={styles.wrapH2InfosCliente}>
       <h2>Emitido:
         <span className={styles.spanH2}>
           {formatDate(data_emissao)}
         </span>
       </h2>
-      <h2>
-        Cliente:
+      <h2>Cliente:
         <span className={styles.spanH2}>
           {cliente}
         </span>
       </h2>
-      <h2>
-        CNPJ:
+      <h2>CNPJ:
         <span className={styles.spanH2}>
           {cnpj_cliente}
         </span>
       </h2>
-      <h2>
-        Situação:
+      <h2>Situação:
         <span className={styles.spanH2}>
           {situacao_orcamento}
         </span>
       </h2>
     </div>
-    <div className={styles.wrapH2InfosCliente}>
-      <h2>
-        Início da obra: <span className={styles.spanH2}>{formatDate(inicio_execucao)}</span>
-      </h2>
-      <h2>
-        Previsão de término: <span className={styles.spanH2}>{formatDate(previsao_termino)}</span>
-      </h2>
-      <h2>
-        Valor fechado: <span className={styles.spanH2}>{formatMoeda(valor_fechado)}</span>
-      </h2>
-      <h2>
-        Custo estipulado: <span className={styles.spanH2}>{formatMoeda(valor_estip_gasto)}</span>
-      </h2>
-    </div>
+  );
+
+  return(<>
+    {InfosBasic}
+    <ValoresPrazos 
+      inicio_execucao={inicio_execucao} 
+      previsao_termino={previsao_termino} 
+      valor_estip_gasto={valor_estip_gasto} 
+      valor_fechado={valor_fechado}/>
   </>);
 };

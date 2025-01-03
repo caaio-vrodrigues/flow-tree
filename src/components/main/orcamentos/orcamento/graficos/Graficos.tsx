@@ -29,15 +29,15 @@ export const Graficos = ({
 }: TGrafico) => {
 
   if (situacao_orcamento !== 'fechado') {
-    return (<>
+    return <>
       <p>{formatMoeda(valor_fechado)}</p>
       <div>Orçamento aguardando finalização da negociação.</div>
-    </>);
+    </>
   };
 
   const dataGraficoGastos = {
-    gasto_alimentacao,gasto_combustivel,gasto_material_obra,
-    gasto_servico_obra,valor_estip_gasto,valor_fechado
+    gasto_alimentacao, gasto_combustivel, gasto_material_obra,
+    gasto_servico_obra, valor_estip_gasto, valor_fechado,
   };
 
   const dataGraficoTempo = {
@@ -45,7 +45,7 @@ export const Graficos = ({
     prazoTermino: previsao_termino,
   };
 
-  return (<>
+  return <>
     <div className={styles.wrapGraficos}>
       <div className={styles.wrapGrafico}>
         <GraficoGastos 
@@ -56,5 +56,5 @@ export const Graficos = ({
           tempo={dataGraficoTempo} />
       </div>
     </div>
-  </>);
+  </>
 };

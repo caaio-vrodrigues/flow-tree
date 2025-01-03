@@ -18,13 +18,12 @@ export const PreviewPagamentos = () => {
       </button>
       <div className={styles.wrapArticlesPagamentos}>
         {previsoesPagamentos.map(prev => {
-          return(
+          return (
             <article key={prev.id}>
               <h2>{prev.title}</h2>
               <h3>R$ {prev.value}</h3>
             </article>
-          )
-        })}
+          )})}
       </div>
     </section>
   );

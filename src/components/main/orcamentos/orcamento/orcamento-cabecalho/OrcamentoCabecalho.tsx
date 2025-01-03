@@ -14,23 +14,21 @@ type TOrcamentoCabecalho = {
   obra: string,
 };
 
-export const OrcamentoCabecalho = ({ num_orcam, obra}: TOrcamentoCabecalho) => {
+export const OrcamentoCabecalho = ({ num_orcam, obra }: TOrcamentoCabecalho) => {
   return (
     <div className={styles.wrapH1AndButtons}>
-      <h1>
-        Orçamento nº {num_orcam} - <span>{obra}</span>
+      <h1>Orçamento nº {num_orcam} - 
+        <span>{obra}</span>
       </h1>
       <div className={styles.wrapButtons}>
         <CustomButton 
           icon={faBoxArchive}
           msgToolTipe='Estoque'
-          onClick={()=>{}}
-        />
+          onClick={() => {}}/>
         <CustomButton 
           icon={faEdit}
           msgToolTipe='Editar'
-          onClick={()=>{}}
-        />
+          onClick={() => {}}/>
       </div>
     </div>
   );

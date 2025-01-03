@@ -8,7 +8,7 @@ export const LeftBlock = () => {
   const pText1 = `Esse sistema web é um modelo feito com o intuito de organizar dados em geral, como: fornecer prévias, levantamentos, acompanhamento de fluxo de caixa, orçamentos, organização de documentos e dados de clientes/fornecedores, estoque... 
   Quaisquer outors tipos de informações que sejam relevantes podem ser facilmente geradas implementando novas funcionalidades.`;
 
-  const pText2 = `"Todo o design foi desenvolvido de forma pura utilizando as ferramentas nativas do html, css e javascript."`;
+  const pText2 = `'Todo o design foi desenvolvido de forma pura utilizando as ferramentas nativas do html, css e javascript.'`;
 
   return(
     <section className={`${footStyles.footBlocks} ${styles.leftBlock}`}>

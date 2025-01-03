@@ -1,6 +1,7 @@
 // src/utils/formatDate.js
 
 export const formatDate = (date) => {
+  
   const d = new Date(date);
   
   // Verifica se a data é válida
