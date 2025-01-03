@@ -13,31 +13,24 @@ type TValoresPrazos = {
   valor_estip_gasto: number,
 };
 
-export const ValoresPrazos = ({ 
-  inicio_execucao, previsao_termino, valor_fechado, valor_estip_gasto 
-}: TValoresPrazos) => {
+export const ValoresPrazos = (props: TValoresPrazos) => {
+  const { 
+    inicio_execucao, previsao_termino, valor_fechado, valor_estip_gasto 
+  } = props;
   
   return <>
     <div className={styles.wrapH2InfosCliente}>
       <h2>Início da obra: 
-        <span className={styles.spanH2}>
-          {formatDate(inicio_execucao)}
-        </span>
+        <span className={styles.spanH2}>{formatDate(inicio_execucao)}</span>
       </h2>
       <h2>Previsão de término: 
-        <span className={styles.spanH2}>
-          {formatDate(previsao_termino)}
-        </span>
+        <span className={styles.spanH2}>{formatDate(previsao_termino)}</span>
       </h2>
       <h2>Valor fechado: 
-        <span className={styles.spanH2}>
-          {formatMoeda(valor_fechado)}
-        </span>
+        <span className={styles.spanH2}>{formatMoeda(valor_fechado)}</span>
       </h2>
       <h2>Custo estipulado: 
-        <span className={styles.spanH2}>
-          {formatMoeda(valor_estip_gasto)}
-        </span>
+        <span className={styles.spanH2}>{formatMoeda(valor_estip_gasto)}</span>
       </h2>
     </div>
   </>

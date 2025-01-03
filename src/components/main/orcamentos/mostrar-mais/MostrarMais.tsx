@@ -12,9 +12,10 @@ type TMostrarMaisProps = {
   visibleCount: number;
 };
 
-export const MostrarMais: React.FC<TMostrarMaisProps> = ({ 
-  orcamentosDataLeng, setVisibleCount, visibleCount 
-}) => {
+export const MostrarMais = (props: TMostrarMaisProps) => {
+  const { 
+    orcamentosDataLeng, setVisibleCount, visibleCount 
+  } = props;
 
   return (
     <div className={styles.butShowMore}>

@@ -29,12 +29,13 @@ type TOrcamento = {
   pdf_contrato: string;
 };
 
-export const Orcamento = ({ 
-  cliente, cnpj_cliente, data_emissao, gasto_alimentacao,
-  gasto_combustivel, gasto_material_obra, gasto_servico_obra, 
-  inicio_execucao, num_orcam, obra, previsao_termino, 
-  situacao_orcamento, valor_estip_gasto, valor_fechado 
-}: TOrcamento) => {
+export const Orcamento = (props: TOrcamento) => {
+  const { 
+    cliente, cnpj_cliente, data_emissao, gasto_alimentacao,
+    gasto_combustivel, gasto_material_obra, gasto_servico_obra, 
+    inicio_execucao, num_orcam, obra, previsao_termino, 
+    situacao_orcamento, valor_estip_gasto, valor_fechado 
+  } = props;
     
   return (
     <article className={`${styles.artic} ${styles.responsive}`}>

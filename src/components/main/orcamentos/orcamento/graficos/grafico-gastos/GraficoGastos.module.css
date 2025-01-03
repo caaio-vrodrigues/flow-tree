@@ -11,40 +11,6 @@
   color: #8d7408;
 }
 
-.listaLegenda {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.circulo {
-  display: inline-block;
-  width: 12px; /* ou qualquer largura desejada */
-  min-width: 12px;
-  height: 12px; /* ou qualquer altura desejada */
-  border-radius: 50%;
-  margin-right: 8px; /* espaço entre o círculo e o texto */
-}
-
-.listaLegenda li{
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-  font-size: 0.9rem;
-  width: 28%;
-  padding-right: 0.3rem;
-  min-width: 10rem;
-  padding: 1rem;
-  border-radius: 0.3rem;
-  box-shadow: var(--boxShadow);
-  border: 0.05rem solid rgb(153, 154, 155);
-}
-
-.wrapLiInside{
-  display: flex;
-  min-width: 12rem;
-}
-
 .svgGraphic{
   width: 11rem;
   height: 11rem;
@@ -60,19 +26,4 @@
 
 .legenda p{
   font-size: var(--fontSize-p);
-}
-
-.wrapLucroEGastosH2{
-  display: flex;
-  width: 100%;
-}
-
-.wrapLucroEGastosH2 h4{
-  margin-top: 0.5rem;
-  font-size: var(--fontSize-h2);
-  margin-right: 2rem;
-}
-
-.pPercent{
-  margin-top: 0.2rem;
 }

@@ -22,7 +22,6 @@ import { funcSearch } from '@/utils/funcSearch';
 import { isValidOrcamento } from './utils/isValidOrcamento';
 
 export const Orcamentos = () => {
-  
   const { 
     visibleCount, searchValue, showAddOrcamento, loading, filteredDataLegth,
     setVisibleCount, setSearchValue, setShowAddOrcamento, setLoading,

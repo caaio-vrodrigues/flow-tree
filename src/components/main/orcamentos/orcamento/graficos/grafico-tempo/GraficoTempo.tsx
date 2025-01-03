@@ -23,7 +23,6 @@ type TGraficoTempo = {
 };
 
 export const GraficoTempo = ({ tempo }: TGraficoTempo) => {
-
   const [tempoCalculado, setTempoCalculado] = useState({
     tempoGasto: 0, tempoDisponivel: 0, tempoTotal: 0,
   });
@@ -31,7 +30,7 @@ export const GraficoTempo = ({ tempo }: TGraficoTempo) => {
   const { tempoGasto, tempoDisponivel, tempoTotal } = tempoCalculado;
   const { dataInicio, prazoTermino } = tempo;
   const porcentagens = calcularPorcentagemTempo({ tempoGasto, tempoTotal });  
-  const angulos = calcularAngulos(porcentagens);
+  const angulos = calcularAngulos({porcentagens});
   const colors = ['#f6f5f0', '#4388ce'];
 
   useEffect(() => {

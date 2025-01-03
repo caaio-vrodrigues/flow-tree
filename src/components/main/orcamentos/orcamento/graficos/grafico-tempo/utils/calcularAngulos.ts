@@ -1,7 +1,14 @@
 // src/components/main/orcamentos/orcamento/graficos/grafico-tempo/utils/calcularAngulos.ts
 
-export const calcularAngulos = ( porcentagens: Record<string, number>
-): [number, number][] => {
+type TcalcularAngulos = {
+  porcentagens: Record<string, number>;
+  disponivel?: number;
+};
+
+type TRcalcularAngulos = [number, number][];
+
+export const calcularAngulos = (props: TcalcularAngulos): TRcalcularAngulos => {
+  const { porcentagens } = props;
 
   const angulos: [number, number][] = [];
   let cumulativeAngle = 0;

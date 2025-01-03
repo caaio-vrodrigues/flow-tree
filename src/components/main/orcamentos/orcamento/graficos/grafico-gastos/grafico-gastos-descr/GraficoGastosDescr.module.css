@@ -1,22 +1,3 @@
-/* src/components/main/orcamentos/orcamento/graficos/grafico-tempo/grafico-tempo-descr/GraficoTempoDescr.module.css */
-
-.legenda h2{
-  font-size: var(--fontSize-h2);
-}
-
-.legenda h3{
-  font-size: var(--fontSize-h2);
-}
-
-.legenda p{
-  font-size: var(--fontSize-p);
-}
-
-.wrapLiInside {
-  display: flex;
-  min-width: 12rem;
-}
-
 .listaLegenda {
   list-style: none;
   padding: 0;
@@ -27,12 +8,13 @@
 .circulo {
   display: inline-block;
   width: 12px;
+  min-width: 12px;
   height: 12px;
   border-radius: 50%;
   margin-right: 8px;
 }
 
-.listaLegenda li {
+.listaLegenda li{
   margin-top: 0.5rem;
   margin-right: 0.5rem;
   font-size: 0.9rem;
@@ -43,4 +25,24 @@
   border-radius: 0.3rem;
   box-shadow: var(--boxShadow);
   border: 0.05rem solid rgb(153, 154, 155);
+}
+
+.wrapLiInside{
+  display: flex;
+  min-width: 12rem;
+}
+
+.pPercent{
+  margin-top: 0.2rem;
+}
+
+.wrapLucroEGastosH2{
+  display: flex;
+  width: 100%;
+}
+
+.wrapLucroEGastosH2 h4{
+  margin-top: 0.5rem;
+  font-size: var(--fontSize-h2);
+  margin-right: 2rem;
 }

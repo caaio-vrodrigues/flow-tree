@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 
 // components
 import { Orcamento } from '../orcamento/Orcamento';
-import { NovoOrcamento } from '../novo-orcamento/NovoOrcamento';
+import { NovoOrcamento } from './novo-orcamento/NovoOrcamento';
 
 // Tipagem
 import { TOrcamentosData } from '@/data/data-test/orcamentos-data';
@@ -18,10 +18,11 @@ type TFiltroOrcamentosProps = {
   visibleCount: number;
 };
 
-export const FiltroOrcamentos: React.FC<TFiltroOrcamentosProps> = ({ 
-  showAddOrcamento, orcamentosData, searchValue, 
-  setFilteredDataLegth, visibleCount 
-}) => {
+export const FiltroOrcamentos = (props: TFiltroOrcamentosProps) => {
+  const { 
+    showAddOrcamento, orcamentosData, searchValue, 
+    setFilteredDataLegth, visibleCount 
+  } = props;
 
   const filteredData = orcamentosData.filter((data) => 
     data.cliente.includes(searchValue) || 

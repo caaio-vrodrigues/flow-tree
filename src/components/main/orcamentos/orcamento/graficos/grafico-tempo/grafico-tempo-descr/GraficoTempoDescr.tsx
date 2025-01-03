@@ -14,9 +14,10 @@ type TGraficoTempoDescr = {
   };
 };
 
-export const GraficoTempoDescr = ({ 
-  colors, tempoTotal, tempoGasto, tempoDisponivel, porcentagens
-}: TGraficoTempoDescr) => {
+export const GraficoTempoDescr = (props: TGraficoTempoDescr) => {
+  const { 
+    colors, tempoTotal, tempoGasto, tempoDisponivel, porcentagens
+  } = props;
 
   const diasRestantes = tempoDisponivel / (1000 * 60 * 60 * 24);
 
@@ -31,7 +32,7 @@ export const GraficoTempoDescr = ({
             <h3>Tempo Total: </h3>
           </div>
           <p>{(tempoTotal / (1000 * 60 * 60 * 24)).toFixed(0)} dias</p>
-          <p className={styles.pPercent}>Percentual equivalente: {porcentagens.tempoTotal.toFixed(2)}%</p>
+          <p className={styles.pPercent}>Percentual tempo restante: {porcentagens.tempoTotal.toFixed(2)}%</p>
         </li>
         <li>
           <div className={styles.wrapLiInside}>
@@ -41,7 +42,7 @@ export const GraficoTempoDescr = ({
             <h3>Tempo Gasto: </h3>
           </div>
           <p>{(tempoGasto / (1000 * 60 * 60 * 24)).toFixed(0)} dias</p>
-          <p className={styles.pPercent}>Percentual equivalente: {porcentagens.tempoGasto.toFixed(2)}%</p>
+          <p className={styles.pPercent}>Percentual tempo gasto: {porcentagens.tempoGasto.toFixed(2)}%</p>
         </li>
       </ul>
       <h2>Dias restantes para execução da obra: {diasRestantes.toFixed(0)} dias</h2>

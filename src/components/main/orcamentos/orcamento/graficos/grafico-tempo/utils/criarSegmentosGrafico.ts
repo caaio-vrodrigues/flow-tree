@@ -5,10 +5,8 @@ type TcriarSegGrafico = {
   endAngle: number,
 };
 
-export const criarSegmentosGrafico = ({ 
-  startAngle, endAngle 
-}: TcriarSegGrafico): string => {
-
+export const criarSegmentosGrafico = (props: TcriarSegGrafico): string => {
+  const { startAngle, endAngle } = props;
   const radius = 100;
   const x1 = 100 + radius * Math.cos((Math.PI / 180) * startAngle);
   const y1 = 100 + radius * Math.sin((Math.PI / 180) * startAngle);

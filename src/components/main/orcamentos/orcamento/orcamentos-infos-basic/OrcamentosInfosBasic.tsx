@@ -20,42 +20,35 @@ type TOrcamentosInfosBasic = {
   valor_estip_gasto: number,
 };
 
-export const OrcamentosInfosBasic = ({ 
-  data_emissao, cliente, cnpj_cliente, situacao_orcamento,
-  inicio_execucao, previsao_termino, valor_estip_gasto, valor_fechado,
-}: TOrcamentosInfosBasic) => {
+export const OrcamentosInfosBasic = (props: TOrcamentosInfosBasic) => {
+  const { 
+    data_emissao, cliente, cnpj_cliente, situacao_orcamento,
+    inicio_execucao, previsao_termino, valor_estip_gasto, valor_fechado,
+  } = props;
   
-  const InfosBasic = (
+  const InfosBasic = <>
     <div className={styles.wrapH2InfosCliente}>
       <h2>Emitido:
-        <span className={styles.spanH2}>
-          {formatDate(data_emissao)}
-        </span>
+        <span className={styles.spanH2}>{formatDate(data_emissao)}</span>
       </h2>
       <h2>Cliente:
-        <span className={styles.spanH2}>
-          {cliente}
-        </span>
+        <span className={styles.spanH2}>{cliente}</span>
       </h2>
       <h2>CNPJ:
-        <span className={styles.spanH2}>
-          {cnpj_cliente}
-        </span>
+        <span className={styles.spanH2}>{cnpj_cliente}</span>
       </h2>
       <h2>Situação:
-        <span className={styles.spanH2}>
-          {situacao_orcamento}
-        </span>
+        <span className={styles.spanH2}>{situacao_orcamento}</span>
       </h2>
     </div>
-  );
+  </>
 
-  return(<>
+  return <>
     {InfosBasic}
     <ValoresPrazos 
       inicio_execucao={inicio_execucao} 
       previsao_termino={previsao_termino} 
       valor_estip_gasto={valor_estip_gasto} 
       valor_fechado={valor_fechado}/>
-  </>);
+  </>;
 };

@@ -1,8 +1,8 @@
 // src/components/main/orcamentos/orcamento/graficos/grafico-tempo/utils/calcularTempo.ts
 
 type TcalcularTempo = {
-  dataInicio: Date | null; // Define como Date ou null
-  prazoTermino: Date | null; // Define como Date ou null
+  dataInicio: Date | null;
+  prazoTermino: Date | null;
 };
 
 export const calcularTempo = ({ dataInicio, prazoTermino }: TcalcularTempo) => {

@@ -36,8 +36,8 @@ export const orcamentosData:TOrcamentosData = [
     gasto_combustivel: 20110.55,
     gasto_alimentacao: 42967.34,
     data_emissao: new Date(Date.UTC(2024, 8, 10)),
-    inicio_execucao: new Date(Date.UTC(2024, 11, 1)),
-    previsao_termino: new Date(Date.UTC(2025, 0, 1)),
+    inicio_execucao: new Date(Date.UTC(2025, 0, 3)),
+    previsao_termino: new Date(Date.UTC(2025, 1, 3)),
     situacaoObra: 'finalizado',
     pdf_orcamento: '@/pdf/pdf1.pdf',
     pdf_contrato: '@/pdf/pdf2.pdf'
