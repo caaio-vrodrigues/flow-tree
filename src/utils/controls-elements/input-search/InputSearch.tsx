@@ -19,7 +19,7 @@ type InputSearchProps = {
 export const InputSearch = ({ funcSearch }: InputSearchProps) => {
 
   const closeDropdown = () => setTimeout(() => setShowDropdown(false), 200);
-  const onClick = () => funcSearch({ value: searchValue, setSearchValue, setLoading })
+  const onClick = () => funcSearch({ value: searchValue.trim(), setSearchValue, setLoading })
 
   const { 
     searchValue, setSearchValue, setShowDropdown, setLoading, 

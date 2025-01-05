@@ -1,33 +1,34 @@
-// src/components/header/right-block/navigation-menu/NavigationMenu.tsx
+// src/components/header/right-block/navigation-menu/IconsComp.tsx
 
-//components
+// components
 import { CustomButton } from '@/utils/custom-button/CustomButton';
 
-//icon
+// icon
 import { 
   faBars, faUser, faSignOutAlt, 
 } from '@fortawesome/free-solid-svg-icons';
 
-//hooks
+// hooks
 import { useState } from 'react';
 
-//components
+// components
 import { NavigationMenu } from '../navigation-menu/NavigationMenu';
 
-//styles
+// styles
 import styles from './IconsComp.module.css';
 
 export const IconsComp = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   return (
     <div className={styles.iconsWrap}>
       <CustomButton 
         msgToolTipe='Menu'
         icon={faBars}
-        onClick={setIsMenuOpen}
+        onClick={() => setIsMenuOpen(true)} // Mudança para abrir o menu
       />
-      {isMenuOpen && <NavigationMenu onClose={setIsMenuOpen}/>}
+      {isMenuOpen && 
+        <NavigationMenu onShow={setIsMenuOpen}/>}
       <CustomButton 
         msgToolTipe='Config. Conta'
         icon={faUser}

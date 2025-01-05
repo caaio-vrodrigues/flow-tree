@@ -1,128 +1,48 @@
 // src/components/header/right-block/navigation-menu/NavigationMenu.tsx
 
 //React
-import React, {  } from 'react';
-
-//context
-// import ContextMaster from '@/context/ContextProvider';
+import React, { useRef, Dispatch, SetStateAction } from 'react';
 
 //styles
 import styles from './NavigationMenu.module.css';
 
-// Definindo a interface para as props do componente
-interface NavigationMenuProps {
-  onClose: (isOpen: boolean) => void;
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+// hooks
+import { useCloseElement } from '@/hooks/useCloseElement';;
+import { useOpenOptionMenu } from './hooks/useOpenOptionMenu';
+
+type TNavigationMenuProps = {
+  onShow: Dispatch<SetStateAction<boolean>>;
 };
 
-export const NavigationMenu: React.FC<NavigationMenuProps> = ({ onClose, setIsMenuOpen }) => {
-  // const { 
-  //   setShowOrcamentos, setShowEstoque, 
-  //   setShowFornecedores, setShowFluxoPagamentos 
-  // } = useContext(ContextMaster);
+export const NavigationMenu = ({ onShow }: TNavigationMenuProps) => {
+  const menuRef = useRef<HTMLMenuElement | null>(null); // Referência para o menu
+
+  useCloseElement({ref: menuRef, funcSetShowElement: onShow});
+
+  const { handleOptionClick } = useOpenOptionMenu();
+
+  const arrMenuOptions = [
+    'Estoque', 'Fluxo Pagamentos', 'Notas', 'Faturas', 'Boletos', 
+    'Fornecedores', 'Clientes', 'Orçamentos', 'Obras', 'Contratos',
+  ];
 
   return (
-    <div className={styles.menu} 
+    <menu className={styles.menu} 
       tabIndex={0} // dar foco a div
-      onBlur={()=>setIsMenuOpen(false)} // fechar ao remover o foco (clicar fora)
-      >
+      ref={menuRef}>
         <button 
           className={styles.closeButton} 
-          onClick={() => onClose(false)}>
+          onClick={() => onShow(false)}>
             X
         </button>
         <ul>
-          <li>
-            <button onClick={() => {
-              // setShowEstoque(true);
-              // setShowOrcamentos(false);
-              // setShowFornecedores(false);
-              // setShowFluxoPagamentos(false);
-            }}>
-              Estoque
-            </button>
-          </li>
-          <li>
-            <button onClick={() => {
-              // setShowOrcamentos(true);
-              // setShowEstoque(false);
-              // setShowFornecedores(false);
-              // setShowFluxoPagamentos(true);
-            }}>Fluxo Pagamentos</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowEstoque(true);
-                // setShowOrcamentos(false);
-                // setShowFornecedores(false);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Notas</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowEstoque(true);
-                // setShowOrcamentos(false);
-                // setShowFornecedores(false);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Faturas</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowEstoque(true);
-                // setShowOrcamentos(false);
-                // setShowFornecedores(false);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Boletos</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowEstoque(false);
-                // setShowOrcamentos(false);
-                // setShowFornecedores(true);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Fornecedores</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowOrcamentos(true);
-                // setShowEstoque(false);
-                // setShowFornecedores(false);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Clientes</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowOrcamentos(true);
-                // setShowEstoque(false);
-                // setShowFornecedores(false);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Orçamentos</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowOrcamentos(true);
-                // setShowEstoque(false);
-                // setShowFornecedores(false);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Obras</button>
-          </li>
-          <li>
-            <button onClick={() => {
-                // setShowOrcamentos(true);
-                // setShowEstoque(false);
-                // setShowFornecedores(false);
-                // setShowFluxoPagamentos(false);
-              }
-            }>Contratos</button>
-          </li>
+          {arrMenuOptions.map((option, i) => 
+            <li key={i}>
+              <button onClick={() => handleOptionClick({clickedOption: option})}>
+                {option}
+              </button>
+            </li>)}
         </ul>
-    </div>
+    </menu>
   );
 };
