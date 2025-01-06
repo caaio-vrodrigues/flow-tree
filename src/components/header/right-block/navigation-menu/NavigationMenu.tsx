@@ -8,7 +8,7 @@ import styles from './NavigationMenu.module.css';
 
 // hooks
 import { useCloseElement } from '@/hooks/useCloseElement';;
-import { useOpenOptionMenu } from './hooks/useOpenOptionMenu';
+import { useOpenOptionMenu } from '../../../../hooks/useOpenOptionMenu';
 
 type TNavigationMenuProps = {
   onShow: Dispatch<SetStateAction<boolean>>;

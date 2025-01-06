@@ -28,11 +28,6 @@ export const Orcamentos = () => {
     setFilteredDataLegth,
   } = useContext(ContextMaster);
 
-  const funcBack = () => {
-    setShowAddOrcamento(false); 
-    setSearchValue('');
-  };
-
   const handleSelect = (selectedOrcamento: string | number) => {
     setSearchValue(selectedOrcamento.toString());
   };
@@ -42,8 +37,8 @@ export const Orcamentos = () => {
   return (
     <section>
       <ControlsElements 
-        funcBack={funcBack} 
-        funcAdd={setShowAddOrcamento} 
+        funcSetAdd={setShowAddOrcamento} 
+        funcSetClose={setShowAddOrcamento}
         funcSearch={({ value }) => funcSearch({ value, setSearchValue, setLoading })} 
         options={validOrcamentos}
         onSelect={handleSelect}

@@ -1,0 +1,22 @@
+.inputSearch{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.inputSearch::placeholder{
+  color: var(--colorPrimaryHover);
+}
+
+.buttonSearch{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.buttonSearch svg{
+  color: var(--colorPrimary);
+}
+
+.buttonSearch svg:hover{
+  color: var(--colorPrimaryHover);
+  cursor: pointer;
+}

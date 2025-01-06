@@ -8,6 +8,9 @@ import ContextMaster from '@/context/ContextProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+// styles
+import styles from './InputSearch.module.css';
+
 type InputSearchProps = {
   funcSearch: (params: {
     value: string,
@@ -39,13 +42,15 @@ export const InputSearch = ({ funcSearch }: InputSearchProps) => {
   return <>
     <input 
       type='text' 
+      className={styles.inputSearch}
       placeholder='Buscar...' 
       aria-label='Campo de busca'
       value={searchValue}
       onChange={(e) => onChange(e)}
       onBlur={() => closeDropdown()}
       onFocus={() => onFocus()}/>
-    <button 
+    <button
+      className={styles.buttonSearch}
       onClick={() => onClick()}
       aria-label='Buscar orçamentos'>
         <FontAwesomeIcon icon={faSearch}/>

@@ -1,5 +1,8 @@
 // src/components/main/pre-visualizacao/preview-pagamentos/PreviewPagamentos.tsx
 
+// hooks
+import { useOpenOptionMenu } from '@/hooks/useOpenOptionMenu';
+
 //styles
 import styles from './PreviewPagamentos.module.css';
 
@@ -11,9 +14,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export const PreviewPagamentos = () => {
+  const { handleOptionClick } = useOpenOptionMenu();
+  
   return(
     <section className={styles.secPreviewPag}>
-      <button onClick={() => {}}>
+      <button onClick={() => handleOptionClick({clickedOption: 'Fluxo Pagamentos'})}>
         <h1>Fluxo de Pagamentos <FontAwesomeIcon icon={faArrowRight}/></h1>
       </button>
       <div className={styles.wrapArticlesPagamentos}>

@@ -25,7 +25,7 @@ export const IconsComp = () => {
       <CustomButton 
         msgToolTipe='Menu'
         icon={faBars}
-        onClick={() => setIsMenuOpen(true)} // Mudança para abrir o menu
+        funcSetAdd={setIsMenuOpen}
       />
       {isMenuOpen && 
         <NavigationMenu onShow={setIsMenuOpen}/>}

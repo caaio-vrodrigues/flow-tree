@@ -23,7 +23,7 @@ export const MostrarMais = (props: TMostrarMaisProps) => {
         <button 
           onClick={() => setVisibleCount(visibleCount + 3)} 
           className={styles.showMoreButton}>
-            Mostrar Mais
+            Mostrar +
         </button>}
     </div>
   );
