@@ -28,7 +28,7 @@ export const Main = () => {
     showFornecedores, showClientes, showOrcamentos, showObras, showContratos,
   } = useContext(ContextMaster);
 
-  return(
+  return (
     <main className={styles.main}>
       <h1 className={styles.h1MainSEO}>Análises e Recursos</h1>
       <div className={styles.wrapMainContent}>

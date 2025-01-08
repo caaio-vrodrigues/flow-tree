@@ -17,31 +17,46 @@ import { faArrowLeft, faAdd } from '@fortawesome/free-solid-svg-icons';
 // context
 import ContextMaster from '@/context/ContextProvider';
 
-type TControlsElements = {
-  options: { id: number; num_orcam: string | number }[];
+// utils
+import { isValidOrcamento } from '@/utils/search-validation/isValidOrcamento';
+import { orcamentosData } from '@/data/data-test/orcamentos-data';
+import { isValidPagamento } from '@/utils/search-validation/isValidPagamento';
+import { fluxoPagamentosData } from '@/data/data-test/fluxo-pagamentos-data';
+
+type TControlsElementsProps = {
   funcSetClose: React.Dispatch<React.SetStateAction<boolean>>;
   funcSetAdd: React.Dispatch<React.SetStateAction<boolean>>;
   onSelect: (value: string | number) => void;
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   funcSearch: (params: { 
     value: string; 
     setSearchValue: React.Dispatch<React.SetStateAction<string>>, 
   }) => void;
 };
 
-export const ControlsElements = ({ 
-  funcSetClose, funcSetAdd, funcSearch, options, onSelect 
-}: TControlsElements) => {
+export const ControlsElements = (props: TControlsElementsProps) => {
+  const { 
+    funcSetClose, funcSetAdd, funcSearch, onSelect,
+  } = props;
 
   const { 
-    searchValue, showDropdown, setShowDropdown, setSearchValue 
+    showFluxoPagamentos,
+    searchValue, showDropdown, setShowDropdown, setSearchValue,
   } = useContext(ContextMaster);
 
-  const filteredOptions = options.filter(option => 
-    option.num_orcam.toString().includes(searchValue));
+  const validOrcamentos = orcamentosData.filter(isValidOrcamento);
+  const validPagamentos = fluxoPagamentosData.filter(isValidPagamento);
+ 
+  const optionsOrcamento = validOrcamentos.filter(option => 
+    option.num_orcam?.toString().includes(searchValue)
+  );
+  const optionsPagamentos = validPagamentos.filter(option => 
+    option.id.toString().includes(searchValue)
+  );
 
-  const isShowDropdown = showDropdown && searchValue && filteredOptions.length > 0;
-
+  // Determina se o dropdown deve ser exibido
+  const isShowDropdown = showDropdown && searchValue && (optionsOrcamento.length > 0 || 
+    (showFluxoPagamentos && optionsPagamentos.length > 0));
+  
   return (
     <div className={stylesControlsEls.wrapButtons}>
       <CustomButton 
@@ -61,7 +76,7 @@ export const ControlsElements = ({
         {isShowDropdown && 
           <DropDown 
             onSelect={onSelect} 
-            filteredOptions={filteredOptions} 
+            filteredOptions={showFluxoPagamentos ? optionsPagamentos : optionsOrcamento}
             setSearchValue={setSearchValue}
             setShowDropdown={setShowDropdown}/>}
       </div>

@@ -7,7 +7,6 @@ type TfuncSearch = {
 };
 
 export const funcSearch = ({ value, setSearchValue, setLoading }: TfuncSearch) => {
-  
   setLoading(true);
   setSearchValue(value);
 

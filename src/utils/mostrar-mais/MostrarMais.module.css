@@ -1,0 +1,25 @@
+
+
+.main{
+  margin-top: var(--headerHeight) !important;
+  padding: var(--paddingLatPadraoHeaderMainFooter);
+  width: 100%;
+  margin: auto;
+  z-index: 99;
+  position: relative;
+}
+
+.h1MainSEO{
+  position: absolute;
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.wrapMainContent{
+  max-width: var(--allContentWidth);
+  margin: auto;
+}
+
+.wrapMainContent p{
+  text-align: justify;
+}

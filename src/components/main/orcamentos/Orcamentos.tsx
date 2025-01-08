@@ -19,7 +19,7 @@ import { orcamentosData } from '@/data/data-test/orcamentos-data';
 
 // utils
 import { funcSearch } from '@/utils/funcSearch';
-import { isValidOrcamento } from './utils/isValidOrcamento';
+import { isValidOrcamento } from '@/utils/search-validation/isValidOrcamento';
 
 export const Orcamentos = () => {
   const { 
@@ -39,10 +39,8 @@ export const Orcamentos = () => {
       <ControlsElements 
         funcSetAdd={setShowAddOrcamento} 
         funcSetClose={setShowAddOrcamento}
-        funcSearch={({ value }) => funcSearch({ value, setSearchValue, setLoading })} 
-        options={validOrcamentos}
-        onSelect={handleSelect}
-        setLoading={setLoading}/>
+        funcSearch={({ value }) => funcSearch({ value, setSearchValue, setLoading })}
+        onSelect={handleSelect}/>
       {loading ? 
         <div className={styles.loader}>Carregando...</div> 
         : <>

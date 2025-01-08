@@ -25,6 +25,7 @@ type TContextMaster = {
   showOrcamentos: boolean,
   showObras: boolean,
   showContratos: boolean,
+  showAddPagamento: boolean,
   setFilteredDataLegth: React.Dispatch<React.SetStateAction<number>>,
   setLoading: React.Dispatch<React.SetStateAction<boolean>>,
   setShowAddOrcamento: React.Dispatch<React.SetStateAction<boolean>>,
@@ -41,6 +42,7 @@ type TContextMaster = {
   setShowOrcamentos: React.Dispatch<React.SetStateAction<boolean>>,
   setShowObras: React.Dispatch<React.SetStateAction<boolean>>,
   setShowContratos: React.Dispatch<React.SetStateAction<boolean>>,
+  setShowAddPagamento: React.Dispatch<React.SetStateAction<boolean>>,
 };
 
 const ContextMaster = createContext<TContextMaster>({
@@ -60,6 +62,7 @@ const ContextMaster = createContext<TContextMaster>({
   showOrcamentos: true,
   showObras: false,
   showContratos: false,
+  showAddPagamento: false,
   setFilteredDataLegth: () => {},
   setLoading: () => {},
   setShowAddOrcamento: () => {},
@@ -76,13 +79,19 @@ const ContextMaster = createContext<TContextMaster>({
   setShowClientes: () => {},
   setShowContratos: () => {},
   setShowObras: () => {},
+  setShowAddPagamento: () => {},
 });
 
 export default ContextMaster;
 
 export function ContextMasterProvider({ children }: TContextMasterProvider): React.ReactNode {
-  const [filteredDataLegth, setFilteredDataLegth] = useState<number>(0);
   const [loading, setLoading] = useState(false);
+
+  // FluxoPagamentos.tsx
+  const [showAddPagamento, setShowAddPagamento] = useState<boolean>(false)
+
+  // Orcamentos.tsx
+  const [filteredDataLegth, setFilteredDataLegth] = useState<number>(0);
   const [showAddOrcamento, setShowAddOrcamento] = useState<boolean>(false);
   const [visibleCount, setVisibleCount] = useState<number>(3);
 
@@ -103,6 +112,7 @@ export function ContextMasterProvider({ children }: TContextMasterProvider): Rea
   const [showContratos, setShowContratos] = useState<boolean>(false);
 
   const contextValue: TContextMaster = {
+    showAddPagamento, setShowAddPagamento,
     showDropdown, setShowDropdown,
     searchValue, setSearchValue,
     filteredDataLegth, setFilteredDataLegth,
