@@ -30,7 +30,6 @@ export const Main = () => {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.h1MainSEO}>Análises e Recursos</h1>
       <div className={styles.wrapMainContent}>
         <PreviewPagamentos/>
         {showEstoque && <Estoque/>}

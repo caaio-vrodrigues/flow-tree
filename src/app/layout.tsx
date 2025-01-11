@@ -4,7 +4,7 @@
 import type { Metadata } from 'next';
 
 // styles
-import './styles.css';
+import './styles/styles.css';
 
 // context
 import { ContextMasterProvider } from '@/context/ContextProvider';

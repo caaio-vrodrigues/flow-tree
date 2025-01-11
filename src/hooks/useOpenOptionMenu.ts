@@ -1,4 +1,4 @@
-// src/components/header/right-block/navigation-menu/hooks/useOpenOptionMenu.ts
+// src/hooks/useOpenOptionMenu.tsx
 
 // react 
 import { useContext } from "react";

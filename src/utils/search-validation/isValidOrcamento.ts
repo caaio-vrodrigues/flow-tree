@@ -1,4 +1,4 @@
-// src/components/main/orcamentos/utils/isValidOrcamento.ts
+// src/utils/search-validation/isValidOrcamento.ts
 
 type TisValidOrcamento = {
   id: number;

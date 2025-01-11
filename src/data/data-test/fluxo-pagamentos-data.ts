@@ -1,3 +1,5 @@
+// src/data/data-test/fluxo-pagamentos-data.ts
+
 export type TFluxoPagamentos = {
   id: number,
   fornecedor: string,

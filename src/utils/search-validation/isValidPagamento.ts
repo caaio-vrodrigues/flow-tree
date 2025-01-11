@@ -1,4 +1,4 @@
-// src/components/main/orcamentos/utils/isValidPagamento.ts
+// src/utils/search-validation/isValidPagamento.ts
 
 type TisValidPagamento = {
   id: number;
