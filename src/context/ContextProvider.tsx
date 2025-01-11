@@ -12,7 +12,6 @@ type TContextMaster = {
   showDropdown: boolean,
   searchValue: string,
   filteredDataLegth: number,
-  loading: boolean,
   showAddOrcamento: boolean,
   visibleCount: number,
   showEstoque: boolean,
@@ -27,7 +26,6 @@ type TContextMaster = {
   showContratos: boolean,
   showAddPagamento: boolean,
   setFilteredDataLegth: React.Dispatch<React.SetStateAction<number>>,
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>,
   setShowAddOrcamento: React.Dispatch<React.SetStateAction<boolean>>,
   setVisibleCount: React.Dispatch<React.SetStateAction<number>>,
   setShowDropdown: React.Dispatch<React.SetStateAction<boolean>>,
@@ -49,7 +47,6 @@ const ContextMaster = createContext<TContextMaster>({
   showDropdown: false,
   searchValue: '',
   filteredDataLegth: 0,
-  loading: false,
   showAddOrcamento: false,
   visibleCount: 3,
   showEstoque: false,
@@ -64,7 +61,6 @@ const ContextMaster = createContext<TContextMaster>({
   showContratos: false,
   showAddPagamento: false,
   setFilteredDataLegth: () => {},
-  setLoading: () => {},
   setShowAddOrcamento: () => {},
   setShowOrcamentos: () => {},
   setVisibleCount: () => {},
@@ -85,8 +81,6 @@ const ContextMaster = createContext<TContextMaster>({
 export default ContextMaster;
 
 export function ContextMasterProvider({ children }: TContextMasterProvider): React.ReactNode {
-  const [loading, setLoading] = useState(false);
-
   // FluxoPagamentos.tsx
   const [showAddPagamento, setShowAddPagamento] = useState<boolean>(false)
 
@@ -116,7 +110,6 @@ export function ContextMasterProvider({ children }: TContextMasterProvider): Rea
     showDropdown, setShowDropdown,
     searchValue, setSearchValue,
     filteredDataLegth, setFilteredDataLegth,
-    loading, setLoading,
     showAddOrcamento, setShowAddOrcamento,
     visibleCount, setVisibleCount,
     showEstoque, setShowEstoque,

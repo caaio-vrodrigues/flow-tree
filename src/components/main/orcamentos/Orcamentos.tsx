@@ -11,9 +11,6 @@ import { ControlsElements } from '@/utils/controls-elements/ControlsElements';
 import { MostrarMais } from './mostrar-mais/MostrarMais';
 import { FiltroOrcamentos } from './filtro-orcamentos/FiltroOrcamentos';
 
-// styles
-import styles from './Orcamentos.module.css';
-
 // data
 import { orcamentosData } from '@/data/data-test/orcamentos-data';
 
@@ -23,9 +20,8 @@ import { isValidOrcamento } from '@/utils/search-validation/isValidOrcamento';
 
 export const Orcamentos = () => {
   const { 
-    visibleCount, searchValue, showAddOrcamento, loading, filteredDataLegth,
-    setVisibleCount, setSearchValue, setShowAddOrcamento, setLoading,
-    setFilteredDataLegth,
+    visibleCount, searchValue, showAddOrcamento, filteredDataLegth,
+    setVisibleCount, setSearchValue, setShowAddOrcamento, setFilteredDataLegth,
   } = useContext(ContextMaster);
 
   const handleSelect = (selectedOrcamento: string | number) => {
@@ -39,23 +35,19 @@ export const Orcamentos = () => {
       <ControlsElements 
         funcSetAdd={setShowAddOrcamento} 
         funcSetClose={setShowAddOrcamento}
-        funcSearch={({ value }) => funcSearch({ value, setSearchValue, setLoading })}
+        funcSearch={({ value }) => funcSearch({ value, setSearchValue })}
         onSelect={handleSelect}/>
-      {loading ? 
-        <div className={styles.loader}>Carregando...</div> 
-        : <>
-        <FiltroOrcamentos 
-          orcamentosData={validOrcamentos}
-          searchValue={searchValue}
-          showAddOrcamento={showAddOrcamento}
-          setFilteredDataLegth={setFilteredDataLegth}
-          visibleCount={visibleCount}/>
-        {!showAddOrcamento && 
-          <MostrarMais
-            orcamentosDataLeng={filteredDataLegth} 
-            setVisibleCount={setVisibleCount} 
-            visibleCount={visibleCount}/>}
-        </>}
+      <FiltroOrcamentos 
+        orcamentosData={validOrcamentos}
+        searchValue={searchValue}
+        showAddOrcamento={showAddOrcamento}
+        setFilteredDataLegth={setFilteredDataLegth}
+        visibleCount={visibleCount}/>
+      {!showAddOrcamento && 
+        <MostrarMais
+          orcamentosDataLeng={filteredDataLegth} 
+          setVisibleCount={setVisibleCount} 
+          visibleCount={visibleCount}/>}
     </section>
   );
 };

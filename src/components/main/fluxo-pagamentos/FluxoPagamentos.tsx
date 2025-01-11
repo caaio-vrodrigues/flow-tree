@@ -21,7 +21,7 @@ import { isValidPagamento } from '@/utils/search-validation/isValidPagamento';
 
 export const FluxoPagamentos = () => {
   const {
-    setShowAddPagamento, setSearchValue, setLoading
+    setShowAddPagamento, setSearchValue
   } = useContext(ContextMaster);
 
   const handleSelect = (selectedOrcamento: string | number) => {
@@ -35,7 +35,7 @@ export const FluxoPagamentos = () => {
       <ControlsElements 
         funcSetAdd={setShowAddPagamento} 
         funcSetClose={setShowAddPagamento}
-        funcSearch={({ value }) => funcSearch({ value, setSearchValue, setLoading })}
+        funcSearch={({ value }) => funcSearch({ value, setSearchValue })}
         onSelect={handleSelect}
         options={validPagamentos}/>
     </section>

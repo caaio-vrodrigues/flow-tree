@@ -3,6 +3,8 @@
 // react
 import { useContext } from 'react';
 
+import Link from 'next/link';
+
 //styles
 import styles from './Main.module.css';
 
@@ -30,6 +32,8 @@ export const Main = () => {
 
   return (
     <main className={styles.main}>
+      <Link href={'/fluxo-pagamentos'}>Ir para página</Link>
+      
       <div className={styles.wrapMainContent}>
         <PreviewPagamentos/>
         {showEstoque && <Estoque/>}
