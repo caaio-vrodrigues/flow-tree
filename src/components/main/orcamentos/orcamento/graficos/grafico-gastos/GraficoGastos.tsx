@@ -7,7 +7,7 @@ import React from 'react';
 import styles from './GraficoGastos.module.css';
 
 // utils
-import { calcularGastos } from './utils/calcularGastos';
+import { calcularGastos } from '../../../../../../utils/funcs/calcular-gastos-grafico/calcularGastos';
 import { criarSegmentosGrafico } from '../grafico-tempo/utils/criarSegmentosGrafico';
 import { calcularAngulos } from '../grafico-tempo/utils/calcularAngulos';
 

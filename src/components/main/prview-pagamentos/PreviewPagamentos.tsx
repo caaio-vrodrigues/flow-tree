@@ -18,8 +18,8 @@ export const PreviewPagamentos = () => {
   
   return(
     <section className={styles.secPreviewPag}>
-      <button onClick={() => handleOptionClick({clickedOption: 'Fluxo Pagamentos'})}>
-        <h1>Fluxo de Pagamentos <FontAwesomeIcon icon={faArrowRight}/></h1>
+      <button onClick={() => handleOptionClick()}>
+        <h1>Fluxo Pagamentos <FontAwesomeIcon icon={faArrowRight}/></h1>
       </button>
       <div className={styles.wrapArticlesPagamentos}>
         {previsoesPagamentos.map(prev => {

@@ -1,5 +1,7 @@
 // src/components/header/Header.tsx
 
+'use client';
+
 //components
 import { LeftBlock } from './left-block/LeftBlock';
 import { RightBlock } from './right-block/RightBlock';

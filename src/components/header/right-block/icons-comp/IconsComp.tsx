@@ -18,25 +18,22 @@ import { NavigationMenu } from '../navigation-menu/NavigationMenu';
 import styles from './IconsComp.module.css';
 
 export const IconsComp = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuNav, setMenuNav] = useState(false);
 
   return (
     <div className={styles.iconsWrap}>
       <CustomButton 
         msgToolTipe='Menu'
         icon={faBars}
-        funcSetAdd={setIsMenuOpen}
-      />
-      {isMenuOpen && 
-        <NavigationMenu onShow={setIsMenuOpen}/>}
+        openMenu={setMenuNav}/>
+      {menuNav && 
+        <NavigationMenu onShow={setMenuNav}/>}
       <CustomButton 
         msgToolTipe='Config. Conta'
-        icon={faUser}
-      />
+        icon={faUser}/>
       <CustomButton 
         msgToolTipe='Sair'
-        icon={faSignOutAlt}
-      />
+        icon={faSignOutAlt}/>
     </div>
   );
 };

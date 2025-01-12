@@ -16,17 +16,16 @@ import stylesControlsEls from '../controls-elements/ControlsElements.module.css'
 type TTooltipe = {
   msgToolTipe: string;
   icon: IconProp;
-  funcSetClose?: React.Dispatch<React.SetStateAction<boolean>>;
-  funcSetAdd?: React.Dispatch<React.SetStateAction<boolean>>;
   tooltipPosisition?: 'top' | 'bottom'; 
   setSearchValue?: Dispatch<SetStateAction<string>>,
+  openMenu?: Dispatch<SetStateAction<boolean>>,
   stylesProp?: boolean,
 };
 
 export const CustomButton = (props: TTooltipe) => {
   const {
     msgToolTipe, icon, stylesProp, tooltipPosisition = 'top', 
-    setSearchValue, funcSetClose, funcSetAdd,
+    setSearchValue, openMenu,
   } = props;
 
   const styles = stylesProp === true ? stylesControlsEls : stylesCustomButton;
@@ -37,11 +36,8 @@ export const CustomButton = (props: TTooltipe) => {
     if(setSearchValue){
       setSearchValue('');
     };
-    if(funcSetAdd){
-      funcSetAdd(true);
-    };
-    if(funcSetClose){
-      funcSetClose(false);
+    if(openMenu){
+      openMenu(true);
     };
   };
 

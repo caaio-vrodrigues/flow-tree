@@ -1,5 +1,5 @@
 // components
-import { NovoPagamento } from '../novo-pagamento/NovoPagamento';
+// import { NovoPagamento } from '../novo-pagamento/NovoPagamento';
 
 export const FiltroPagamentos = () => {
   return <>

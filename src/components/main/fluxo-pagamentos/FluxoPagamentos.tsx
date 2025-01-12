@@ -1,3 +1,5 @@
+// src/components/main/fluxo-pagamentos/FluxoPagamentos.tsx
+
 // react
 import { useContext } from 'react';
 
@@ -12,32 +14,21 @@ import { ControlsElements } from '@/utils/controls-elements/ControlsElements';
 // styles
 import styles from './FluxoPagamentos.module.css';
 
-// data
-import { fluxoPagamentosData } from '@/data/data-test/fluxo-pagamentos-data';
-
 // utils
-import { funcSearch } from '@/utils/funcSearch';
-import { isValidPagamento } from '@/utils/search-validation/isValidPagamento';
+import { funcSearch } from '@/utils/funcs/funcSearch';
 
 export const FluxoPagamentos = () => {
-  const {
-    setShowAddPagamento, setSearchValue
-  } = useContext(ContextMaster);
+  const { setSearchValue } = useContext(ContextMaster);
 
   const handleSelect = (selectedOrcamento: string | number) => {
     setSearchValue(selectedOrcamento.toString());
   };
 
-  const validPagamentos = fluxoPagamentosData.filter(isValidPagamento);
-
   return <>
     <section className={styles.secFluxoPagamentos}>
       <ControlsElements 
-        funcSetAdd={setShowAddPagamento} 
-        funcSetClose={setShowAddPagamento}
         funcSearch={({ value }) => funcSearch({ value, setSearchValue })}
-        onSelect={handleSelect}
-        options={validPagamentos}/>
+        onSelect={handleSelect}/>
     </section>
   </>
 };

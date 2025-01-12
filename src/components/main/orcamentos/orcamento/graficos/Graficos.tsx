@@ -8,7 +8,7 @@ import { GraficoTempo } from './grafico-tempo/GraficoTempo';
 import styles from './Grafico.module.css';
 
 // utils
-import { formatMoeda } from '@/utils/formatMoeda';
+import { formatMoeda } from '@/utils/funcs/formatMoeda';
 
 type TGrafico = {
   gasto_material_obra: number;

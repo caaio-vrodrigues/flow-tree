@@ -1,5 +1,7 @@
 // src/components/main/orcamentos/Orcamentos.tsx
 
+'use client'
+
 // react
 import { useContext } from 'react';
 
@@ -15,13 +17,13 @@ import { FiltroOrcamentos } from './filtro-orcamentos/FiltroOrcamentos';
 import { orcamentosData } from '@/data/data-test/orcamentos-data';
 
 // utils
-import { funcSearch } from '@/utils/funcSearch';
+import { funcSearch } from '@/utils/funcs/funcSearch';
 import { isValidOrcamento } from '@/utils/search-validation/isValidOrcamento';
 
 export const Orcamentos = () => {
   const { 
-    visibleCount, searchValue, showAddOrcamento, filteredDataLegth,
-    setVisibleCount, setSearchValue, setShowAddOrcamento, setFilteredDataLegth,
+    visibleCount, searchValue, filteredDataLegth,
+    setVisibleCount, setSearchValue, setFilteredDataLegth,
   } = useContext(ContextMaster);
 
   const handleSelect = (selectedOrcamento: string | number) => {
@@ -33,21 +35,18 @@ export const Orcamentos = () => {
   return (
     <section>
       <ControlsElements 
-        funcSetAdd={setShowAddOrcamento} 
-        funcSetClose={setShowAddOrcamento}
         funcSearch={({ value }) => funcSearch({ value, setSearchValue })}
-        onSelect={handleSelect}/>
+        onSelect={handleSelect}
+        page={'orcamentos'}/>
       <FiltroOrcamentos 
         orcamentosData={validOrcamentos}
         searchValue={searchValue}
-        showAddOrcamento={showAddOrcamento}
         setFilteredDataLegth={setFilteredDataLegth}
         visibleCount={visibleCount}/>
-      {!showAddOrcamento && 
-        <MostrarMais
-          orcamentosDataLeng={filteredDataLegth} 
-          setVisibleCount={setVisibleCount} 
-          visibleCount={visibleCount}/>}
+      <MostrarMais
+        orcamentosDataLeng={filteredDataLegth} 
+        setVisibleCount={setVisibleCount} 
+        visibleCount={visibleCount}/>
     </section>
   );
 };

@@ -1,5 +1,7 @@
 // components/footer/Footer.tsx
 
+'use client';
+
 import { LeftBlock } from './left-block/LeftBlock';
 import { CenterBlock } from './center-block/CenterBlock';
 import { RightBlock } from './right-block/RightBlock';

@@ -4,7 +4,7 @@
 import React from 'react';
 
 // funcs
-import { formatMoeda } from '@/utils/formatMoeda';
+import { formatMoeda } from '@/utils/funcs/formatMoeda';
 
 // styles
 import styles from './GraficoGastosDescr.module.css';

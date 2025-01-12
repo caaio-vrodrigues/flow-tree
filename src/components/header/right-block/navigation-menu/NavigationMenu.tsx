@@ -3,12 +3,18 @@
 //React
 import React, { useRef, Dispatch, SetStateAction } from 'react';
 
+//next
+import Link from 'next/link';
+
 //styles
 import styles from './NavigationMenu.module.css';
 
 // hooks
 import { useCloseElement } from '@/hooks/useCloseElement';;
 import { useOpenOptionMenu } from '../../../../hooks/useOpenOptionMenu';
+
+// funcs
+import { menuOptionsList } from '@/utils/funcs/menuOptionsList';
 
 type TNavigationMenuProps = {
   onShow: Dispatch<SetStateAction<boolean>>;
@@ -21,11 +27,6 @@ export const NavigationMenu = ({ onShow }: TNavigationMenuProps) => {
 
   const { handleOptionClick } = useOpenOptionMenu();
 
-  const arrMenuOptions = [
-    'Estoque', 'Fluxo Pagamentos', 'Notas', 'Faturas', 'Boletos', 
-    'Fornecedores', 'Clientes', 'Orçamentos', 'Obras', 'Contratos',
-  ];
-
   return (
     <menu className={styles.menu} 
       tabIndex={0} // dar foco a div
@@ -36,10 +37,14 @@ export const NavigationMenu = ({ onShow }: TNavigationMenuProps) => {
             X
         </button>
         <ul>
-          {arrMenuOptions.map((option, i) => 
+          {menuOptionsList.map((option, i) => 
             <li key={i}>
-              <button onClick={() => handleOptionClick({clickedOption: option})}>
-                {option}
+              <button onClick={() => handleOptionClick()}>
+                <Link
+                  className={styles.linkOptMenu} 
+                  href={option.link}>
+                  {option.option}
+                </Link>
               </button>
             </li>)}
         </ul>

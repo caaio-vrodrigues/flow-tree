@@ -15,17 +15,16 @@ type InputSearchProps = {
   funcSearch: (params: {
     value: string,
     setSearchValue: React.Dispatch<React.SetStateAction<string>>,
-    setLoading: React.Dispatch<React.SetStateAction<boolean>>
   }) => void;
 };
 
 export const InputSearch = ({ funcSearch }: InputSearchProps) => {
 
   const closeDropdown = () => setTimeout(() => setShowDropdown(false), 200);
-  const onClick = () => funcSearch({ value: searchValue.trim(), setSearchValue, setLoading })
+  const onClick = () => funcSearch({ value: searchValue.trim(), setSearchValue })
 
   const { 
-    searchValue, setSearchValue, setShowDropdown, setLoading, 
+    searchValue, setSearchValue, setShowDropdown
   } = useContext(ContextMaster);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

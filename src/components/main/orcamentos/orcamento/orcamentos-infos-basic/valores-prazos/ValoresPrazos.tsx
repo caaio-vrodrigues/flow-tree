@@ -3,8 +3,8 @@
 import styles from '../OrcamentosInfosBasic.module.css';
 
 // utils
-import { formatMoeda } from '@/utils/formatMoeda';
-import { formatDate } from '@/utils/formatDate';
+import { formatMoeda } from '@/utils/funcs/formatMoeda';
+import { formatDate } from '@/utils/funcs/formatDate';
 
 type TValoresPrazos = {
   inicio_execucao: Date | null,

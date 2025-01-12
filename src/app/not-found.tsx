@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from './styles/styles.module.css';
+import styles from '@/styles/styles.module.css';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

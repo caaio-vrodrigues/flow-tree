@@ -4,7 +4,7 @@
   position: absolute;
   text-align: left;
   top: 3.7rem;
-  right: 0.1rem;
+  right: 0.00001rem;
   background-color: white;
   border: var(--borderBox);
   box-shadow: var(--boxShadow);
@@ -19,13 +19,16 @@
 
 .menu li button {
   text-align: left;
-  text-decoration: none;
-  transition: color 0.2s;
-  cursor: pointer;
-  color: var(--colorPrimary);
 }
 
-.menu li button:hover {
+.linkOptMenu{
+  text-decoration: none;
+  color: var(--colorPrimary);
+  cursor: pointer;
+}
+
+.linkOptMenu:hover{
+  transition: 0.2s;
   color: var(--colorPrimaryHover);
 }
 

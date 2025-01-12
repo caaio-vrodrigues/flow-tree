@@ -4,7 +4,7 @@
 import { ValoresPrazos } from './valores-prazos/ValoresPrazos';
 
 // utils
-import { formatDate } from '@/utils/formatDate';
+import { formatDate } from '@/utils/funcs/formatDate';
 
 // styles
 import styles from './OrcamentosInfosBasic.module.css';

@@ -6,7 +6,7 @@
 import React from 'react';
 
 // styles
-import styles from './styles/styles.module.css';
+import styles from '@/styles/styles.module.css';
 
 type TErrorProps = {
   error: Error;
