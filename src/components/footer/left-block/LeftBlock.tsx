@@ -13,7 +13,7 @@ export const LeftBlock = () => {
   return(
     <section className={`${footStyles.footBlocks} ${styles.leftBlock}`}>
       <h1>Descrições</h1>
-      <div>
+      <div className={styles.wrapH2}>
         <h2>Objetivo: </h2>
         <p>{pText1}</p>
         <p>{pText2}</p>

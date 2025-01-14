@@ -19,13 +19,12 @@ type InputSearchProps = {
 };
 
 export const InputSearch = ({ funcSearch }: InputSearchProps) => {
-
-  const closeDropdown = () => setTimeout(() => setShowDropdown(false), 200);
-  const onClick = () => funcSearch({ value: searchValue.trim(), setSearchValue })
-
   const { 
     searchValue, setSearchValue, setShowDropdown
   } = useContext(ContextMaster);
+
+  const closeDropdown = () => setTimeout(() => setShowDropdown(false), 200);
+  const onClick = () => funcSearch({ value: searchValue.trim(), setSearchValue })
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);

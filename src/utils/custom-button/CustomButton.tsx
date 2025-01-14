@@ -13,28 +13,33 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import stylesCustomButton from './CustomButton.module.css'; 
 import stylesControlsEls from '../controls-elements/ControlsElements.module.css';
 
+// next
+import Link from 'next/link';
+
 type TTooltipe = {
+  linkNovo?: string;
+  linkVoltar?: string;
   msgToolTipe: string;
   icon: IconProp;
   tooltipPosisition?: 'top' | 'bottom'; 
-  setSearchValue?: Dispatch<SetStateAction<string>>,
+  setSearchValueNull?: Dispatch<SetStateAction<string>>,
   openMenu?: Dispatch<SetStateAction<boolean>>,
   stylesProp?: boolean,
 };
 
 export const CustomButton = (props: TTooltipe) => {
+  const [tooltipeVisible, setTooltipeVisible] = useState(false);
+  
   const {
-    msgToolTipe, icon, stylesProp, tooltipPosisition = 'top', 
-    setSearchValue, openMenu,
+    msgToolTipe, icon, stylesProp, linkNovo, linkVoltar,
+    tooltipPosisition = 'top', setSearchValueNull, openMenu,
   } = props;
 
   const styles = stylesProp === true ? stylesControlsEls : stylesCustomButton;
 
-  const [tooltipeVisible, setTooltipeVisible] = useState(false);
-
   const handleClick = () => {
-    if(setSearchValue){
-      setSearchValue('');
+    if(setSearchValueNull){
+      setSearchValueNull('');
     };
     if(openMenu){
       openMenu(true);
@@ -47,11 +52,15 @@ export const CustomButton = (props: TTooltipe) => {
       onClick={handleClick}
       onMouseEnter={() => setTooltipeVisible(true)}
       onMouseLeave={() => setTooltipeVisible(false)}>
-        <FontAwesomeIcon icon={icon} />
+        {linkNovo || linkVoltar ?
+          <Link href={linkNovo ? linkNovo : linkVoltar ? linkVoltar : ''}>
+            <FontAwesomeIcon icon={icon}/>
+          </Link> 
+          : <FontAwesomeIcon icon={icon}/>}
         {tooltipeVisible && 
           <span 
             className={`${stylesCustomButton.tooltip} ${tooltipPosisition === 'bottom' ? 
-              stylesCustomButton.tooltipBottom : stylesCustomButton.tooltipTop}`}>
+            stylesCustomButton.tooltipBottom : stylesCustomButton.tooltipTop}`}>
               {msgToolTipe}
           </span>}
     </button>

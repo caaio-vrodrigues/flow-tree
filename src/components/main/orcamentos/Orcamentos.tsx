@@ -37,7 +37,9 @@ export const Orcamentos = () => {
       <ControlsElements 
         funcSearch={({ value }) => funcSearch({ value, setSearchValue })}
         onSelect={handleSelect}
-        page={'orcamentos'}/>
+        page={'orcamentos'}
+        linkNovo='/orcamentos/novo'
+        linkVoltar='/'/>
       <FiltroOrcamentos 
         orcamentosData={validOrcamentos}
         searchValue={searchValue}

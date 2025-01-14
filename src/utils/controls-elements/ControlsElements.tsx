@@ -21,6 +21,8 @@ import ContextMaster from '@/context/ContextProvider';
 import { getSearchOptions } from '../funcs/getSearchOptions';
 
 type TControlsElementsProps = {
+  linkNovo: string;
+  linkVoltar: string;
   page?: string;
   onSelect: (value: string | number) => void;
   funcSearch: (params: { 
@@ -30,12 +32,15 @@ type TControlsElementsProps = {
 };
 
 export const ControlsElements = (props: TControlsElementsProps) => {
-  const { funcSearch, onSelect, page } = props;
+  const { 
+    funcSearch, onSelect, page, linkNovo, linkVoltar,
+  } = props;
 
   const { 
     searchValue, showDropdown, setShowDropdown, setSearchValue,
   } = useContext(ContextMaster);
 
+  // prop "page" define para qual página a busca está sendo realizada
   const options = getSearchOptions({ page: page ? page : '', searchValue});
   const isShowDropdown = showDropdown && searchValue && (options.length > 0);
   
@@ -45,12 +50,14 @@ export const ControlsElements = (props: TControlsElementsProps) => {
         icon={faArrowLeft} 
         msgToolTipe='Voltar'
         stylesProp={true}
-        setSearchValue={setSearchValue}/>
+        setSearchValueNull={setSearchValue}
+        linkVoltar={linkVoltar}/>
       <CustomButton 
         icon={faAdd} 
         msgToolTipe='Novo'
         stylesProp={true}
-        setSearchValue={setSearchValue}/>
+        setSearchValueNull={setSearchValue}
+        linkNovo={linkNovo}/>
       <div className={stylesControlsEls.wrapSearch}>
         <InputSearch funcSearch={funcSearch}/>
         {isShowDropdown && 
