@@ -15,6 +15,7 @@ export const useOpenOptionMenu = () => {
     setShowDropdown(false);
     setSearchValue('');
     setVisibleCount(3);
+    window.scroll(0, 0);
   };
 
   return { handleOptionClick };

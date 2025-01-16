@@ -1,7 +1,16 @@
+// components 
+import { Header } from "@/components/header/Header";
+import { NovoOrcamentoComp } from "@/components/main/orcamentos/novo-orcamento/NovoOrcamentoComp";
+import { Footer } from "@/components/footer/Footer";
+
+// styles
+// import styles from './page.module.css';
 
 const NovoOrcamento = () => {
   return <>
-    <div>Adicionar novo orçamento</div>
+    <Header/>
+    <NovoOrcamentoComp/>
+    <Footer/>
   </>
 };
 

@@ -2,12 +2,14 @@
 
 .customButtom{
   position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 
 .customButtom svg{
   color: var(--colorPrimary);
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .customButtom svg:hover{

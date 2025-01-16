@@ -1,0 +1,62 @@
+/* src/components/main/orcamentos/novo-orcamento/form-add-orcamento/FormAddOrcamento.module.css */
+
+.formAddOrcamento {
+  margin-top: 1rem;
+  padding: 1.5rem; /* Espaco interno para o formulário */
+  border: 1px solid #e1e1e1; /* Borda leve para o formulário */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  background-color: #ffffff; /* Fundo branco */
+}
+
+.containerInputs{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wrapInpuAndLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  width: 18%;
+  min-width: 10rem;
+}
+
+.label {
+  display: block; /* Faz o label ocupar toda a largura */
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do label */
+  font-weight: bold; /* Negrito para o texto do label */
+  color: #333; /* Cor do texto do label */
+}
+
+.formAddOrcamento input[type="text"] {
+  padding: 0.5rem; /* Espaço interno do campo */
+  border: 1px solid #ccc; /* Borda leve */
+  border-radius: 4px; /* Bordas arredondadas nos campos */
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: border-color 0.3s; /* Transição para a cor da borda */
+}
+
+.formAddOrcamento input[type="text"]:focus {
+  border-color: #0070f3; /* Cor da borda quando em foco */
+  outline: none; /* Remove a borda padrão do foco */
+}
+
+.formAddOrcamento button {
+  width: 18%;
+  min-width: 10rem;
+  margin: auto;
+  padding: 0.7rem 1.2rem; /* Espaçamento interno do botão */
+  background-color: #0070f3; /* Cor do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Bordas arredondadas no botão */
+  cursor: pointer; /* Cursor em forma de mão */
+  font-size: 1rem; /* Tamanho da fonte do botão */
+  transition: background-color 0.3s; /* Transição de cor ao passar o mouse */
+}
+
+.formAddOrcamento button:hover {
+  background-color: #005bb5; /* Cor do botão ao passar o mouse */
+}
