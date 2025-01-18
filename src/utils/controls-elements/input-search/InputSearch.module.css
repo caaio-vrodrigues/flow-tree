@@ -1,6 +1,8 @@
 .inputSearch{
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  color: var(--colorPrimary);
+  font-size: var(--fontSize-h2);
 }
 
 .inputSearch::placeholder{
@@ -10,6 +12,7 @@
 .buttonSearch{
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  padding-right: 0.1rem;
 }
 
 .buttonSearch svg{

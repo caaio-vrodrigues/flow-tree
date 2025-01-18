@@ -9,7 +9,7 @@ import { InputSearch } from './input-search/InputSearch';
 import { CustomButton } from '../custom-button/CustomButton';
 
 // styles
-import stylesControlsEls from './ControlsElements.module.css';          
+import styles from './ControlsElements.module.css';          
 
 // icon
 import { faArrowLeft, faAdd } from '@fortawesome/free-solid-svg-icons';
@@ -45,20 +45,22 @@ export const ControlsElements = (props: TControlsElementsProps) => {
   const isShowDropdown = showDropdown && searchValue && (options.length > 0);
   
   return (
-    <div className={stylesControlsEls.wrapButtons}>
-      <CustomButton 
-        icon={faArrowLeft} 
-        msgToolTipe='Voltar'
-        stylesProp={true}
-        setSearchValueNull={setSearchValue}
-        linkVoltar={linkVoltar}/>
-      <CustomButton 
-        icon={faAdd} 
-        msgToolTipe='Novo'
-        stylesProp={true}
-        setSearchValueNull={setSearchValue}
-        linkNovo={linkNovo}/>
-      <div className={stylesControlsEls.wrapSearch}>
+    <div className={styles.container}>
+      <div className={styles.wrapButtons}>
+        <CustomButton
+          icon={faArrowLeft}
+          msgToolTipe='Voltar'
+          stylesProp={true}
+          setSearchValueNull={setSearchValue}
+          linkVoltar={linkVoltar}/>
+        <CustomButton
+          icon={faAdd}
+          msgToolTipe='Novo'
+          stylesProp={true}
+          setSearchValueNull={setSearchValue}
+          linkNovo={linkNovo}/>
+      </div>
+      <div className={styles.wrapSearch}>
         <InputSearch funcSearch={funcSearch}/>
         {isShowDropdown && 
           <DropDown 

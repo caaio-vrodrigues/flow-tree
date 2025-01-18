@@ -23,7 +23,7 @@ export const DropDown = ({
   return (
     <div className={styles.dropdown}>
       {filteredOptions.map((option, i) => (
-        <div 
+        <span 
           key={i} 
           className={`${styles.dropdownItem} ${styles.option}`}
           onClick={() => {
@@ -32,11 +32,11 @@ export const DropDown = ({
               handleSelectedChange(option.num_orcam);
             } else if ('id' in option) {
               handleSelectedChange(option.id);
-            }
+            };
           }}>
             {/* Exibir a propriedade apropriada */}
             {'num_orcam' in option ? option.num_orcam : option.id}
-        </div>
+        </span>
       ))}
     </div>
   );

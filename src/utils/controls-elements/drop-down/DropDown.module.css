@@ -1,0 +1,32 @@
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  margin-top: 0.4rem;
+  border-radius: 0.3rem;
+  background-color: var(--colorPrimary);
+  padding: 0.05rem;
+}
+
+.dropdownItem{
+  border-radius: 0.3rem;
+  font-size: var(--fontSize-p);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 12rem;
+  height: 2rem;
+  color: var(--colorPrimary);
+  padding: 0.3rem;
+  padding-top: 0.45rem;
+  background-color: var(--bgWhite);
+  border: 0.1rem solid var(--colorPrimary);
+}
+
+.dropdownItem:hover{
+  transition: 0.3s;
+  background-color: var(--colorPrimary);
+  padding-left: 0.8rem;
+  color: white;
+}

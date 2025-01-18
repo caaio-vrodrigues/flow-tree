@@ -1,9 +1,13 @@
 /* src/utils/controls-elements/ControlsElements.module.css */
 
+.container{
+  display: flex;
+}
+
 .wrapButtons{
   display: flex;
-  width: fit-content;
   align-items: center;
+  max-height: 2rem;
 }
 
 .customButtom{
